@@ -1,0 +1,116 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-light " style="background-color: #18a058;">
+    <!-- Container wrapper -->
+    <div class="container"> <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarCenteredExample"
+            aria-controls="navbarCenteredExample" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+            <!-- Left links -->
+            <ul class="navbar-nav mb-2 mb-lg-0" (click)="closeNavbar()">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#" [routerLink]="['/']" (click)="scroll()">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" [routerLink]="['/Aboutus']" (click)="scroll()">About BVJSS</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#" [routerLink]="['/PabalSchool']" (click)="scroll()"> Pabal School</a>
+                </li>
+
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#" [routerLink]="['/Initiative']" (click)="scroll()">Initiatives</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#" [routerLink]="['/mediacoverage']" (click)="scroll()">Media Coverage</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#" [routerLink]="['/howhelp']" (click)="scroll()">Donate</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#" [routerLink]="['/HelpingHands']" (click)="scroll()">Helping Hand</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#" [routerLink]="['/gallery']" (click)="scroll()">Gallery</a>
+                </li>
+
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#" [routerLink]="['/blogs']" (click)="scroll()">Blogs </a>
+                </li> -->
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#" [routerLink]="['/Feedback']" (click)="scroll()">FeedBack </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#" [routerLink]="['/contact']" (click)="scroll()">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</nav>
+
+<br>
+<div class="container">
+    <br> <br>
+    <!-- <div class="div" style="display: flex; ">
+        <div class="div">
+            <img class="img2" src="/assets/logo.jpg" alt="">
+        </div> 
+        <div class="div" >
+            <h6>Contact Us </h6>
+            <h6>+91 9325500100</h6>
+        </div>
+        <br>
+        <div class="div" style="margin-left: 3%;">
+            <h6>Email Us</h6>
+            <h6>backupbvjss@gmail.com</h6>
+        </div>
+        <div class="bttn ">
+            <button class="btn btn-success" [routerLink]="['/payment']">DONATE NOW </button>
+        </div>
+    </div>  -->
+    <div class="row  row-cols-md-4">
+        <div class="col-lg-3 col-sm-12">
+            <img class="img" src="/assets/logo.png" alt="">
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="div">
+                        <h4>Contact Us: </h4>
+                        <h5>+91 9372466612</h5>
+                        <h5>+91 9325500100</h5>
+                    </div> <br>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="div" style="margin-left: 3%;">
+                        <h4>Email Us:</h4>
+                        <h5>info&#64;bvjss.org</h5>
+                        <h5>backupbvjss&#64;gmail.com</h5>
+                    </div>
+                </div>  
+
+            </div>
+            <br>
+        </div>
+        <div class="col-md-2">
+            <div class="bttn" style="text-align: end;">
+                <div class="text-center">
+                    <button class="btn btn-lg btn-success animate__animated animate__pulse animate__infinite"
+                        [routerLink]="['/payment']">
+                        <b>DONATE NOW </b></button>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>

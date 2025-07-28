@@ -1,0 +1,57 @@
+<img width="100%" src="/assets/Helping Hand_02.jpg" alt="">
+<br><br>
+
+<div class="container">
+    <h2>Donate Now</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <form (ngSubmit)="initiatePayment()">
+
+                        <label>Amount:</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i
+                                    class="fa-solid fa-indian-rupee-sign"></i></span>
+                            <input [(ngModel)]="order.order_amount" name="amount" class="form-control"  />
+                        </div>
+
+                        <label class="mt-2">Name:</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                            <input [(ngModel)]="order.customer_details.customer_name" name="customer_name"
+                                class="form-control" required />
+                        </div>
+
+                        <label class="mt-2">Email:</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-envelope"></i></span>
+                            <input [(ngModel)]="order.customer_details.customer_email" name="email" class="form-control"
+                                required />
+                        </div>
+
+                        <label class="mt-2">Contact No.:</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-phone"></i></span>
+                            <input [(ngModel)]="order.customer_details.customer_phone" name="phone" class="form-control"
+                                required />
+                        </div>
+
+                        <label class="mt-2">PAN No:</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i
+                                    class="fa-solid fa-id-card-clip"></i></span>
+                            <input [(ngModel)]="order.customer_details.customer_panNo" name="panNo" class="form-control"
+                                required />
+                        </div>
+
+                        <br><br>
+                        <button type="submit" class="btn btn-success">Pay Now</button>
+                        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

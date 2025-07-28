@@ -1,0 +1,1340 @@
+<!-- <div class="main">
+    <h1>How Can You Help</h1>
+</div> -->
+
+<img width="100%" src="/assets/headerimage/4.png" alt="">
+
+<div class="container">
+    <br>
+    <h1> Sponsor a child and support a child in need</h1> <br>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="">
+                <img src="/assets/gallery/Abhijit Katke.jpg" alt=""><br><br>
+                <h6>Single Child (Yearly)</h6>
+                <h5>₹ 24,000 </h5>
+                <div class="bttn">
+                    <button type="button" class="btn btn-success" data-mdb-toggle="modal"
+                        data-mdb-target="#exampleModal26">
+                        Donate
+                    </button>
+                </div>
+
+                <div class="modal fade" id="exampleModal26" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Pay for Single Child</h5>
+                                <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form (ngSubmit)="initiatePayment()">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <input [(ngModel)]="order.order_amount" type="radio" name="amount"
+                                                        value="24000" />
+                                                    <label for="amount"> 24,000 &#x20B9;</label>
+
+                                                    <label>Amount: </label>
+                                                    <input [(ngModel)]="order.order_amount" name="amount"
+                                                        class="inputA">
+                                                    <br><br>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label>Name:</label> <br>
+                                            <input placeholder="Enter Name"
+                                                [(ngModel)]="order.customer_details.customer_name" name="customer_name"
+                                                class="input" required>
+                                            <br><br>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Email:</label><br>
+                                            <input [(ngModel)]="order.customer_details.customer_email" name="email"
+                                                placeholder="Enter Email" class="input" required>
+                                            <br><br>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Contact No.:</label><br>
+                                            <input [(ngModel)]="order.customer_details.customer_phone" name="phone"
+                                                placeholder="Enter Contact number" class="input" required>
+                                            <br><br>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label>Pan No :</label><br>
+                                            <input [(ngModel)]="order.customer_details.customer_panNo" name="panNo"
+                                                type="text" placeholder="Enter Pan No" class="input" required>
+                                            <br><br>
+                                        </div>
+
+
+                                        <div class="text-center">
+                                            <div>
+                                                <button class="btn btn-success btn-lg" type="submit"> <b>Pay Now</b>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-4">
+            <div class="">
+                <img src="/assets/gallery/IMG_20191014_132652.jpg" alt=""><br><br>
+                <h6>Multiple Child (Yearly) </h6>
+                <h5 style="display: flex;">
+                    ₹ 24,000 x
+                    <span style="padding-left: 2%;">
+                        <select class="form-select" [(ngModel)]="selectedQuantity" (change)="updateTotal()">
+                            <option *ngFor="let qty of quantities" [value]="qty">{{ qty }} </option>
+                        </select>
+                    </span>
+                    <span style="padding-left: 2%;">= ₹{{ totalAmount | number:'1.0-0' }}</span>
+                </h5>
+                <div class="bttn">
+                    <button type="button" class="btn btn-success" data-mdb-toggle="modal"
+                        data-mdb-target="#exampleModal25">
+                        Donate
+                    </button>
+                </div>
+                <div class="modal fade" id="exampleModal25" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Pay for Multiple Child</h5>
+                                <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="/assets/payment/QRcode.jpg" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br>
+        <!-- <div class="col-md-4">
+            <div class="">
+                <img src="/assets/dinner.png" alt=""><br><br>
+                <h6>Dinner</h6>
+                <h5>₹.6000</h5>
+                <div class="bttn">
+                    <button type="button" class="btn btn-success" data-mdb-toggle="modal"
+                        data-mdb-target="#exampleModal24">
+                        Donate
+                    </button>
+                </div>
+                <div class="modal fade" id="exampleModal24" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Pay for Dinner RS.</h5>
+                                <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="/assets/payment/QRcode.jpg" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br> -->
+    </div>
+    <br>
+</div>
+<div class="container-fluid">
+    <div class="card" style="background-color: rgb(141, 195, 34); color: white;">
+        <div class="text-center" style="padding: 5px;">
+            <!-- <h1>In the interest of hygiene and safety, outside food is not permitted.</h1> -->
+            <h1 style="font-size:35px">We appreciate your cooperation in keeping our facility clean <br> by not bringing
+                in external food items.</h1>
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="container">
+    <div class="row">
+        <h1>Nutritional Food</h1>
+        <div class="col-md-4">
+            <div class="">
+                <img src="/assets/milk.png" alt=""><br><br>
+                <h6>Milk (One Time)</h6>
+                <h5>₹ 2,000</h5>
+                <div class="bttn">
+                    <button type="button" class="btn btn-success" data-mdb-toggle="modal"
+                        data-mdb-target="#exampleModal23">
+                        Donate
+                    </button>
+                </div>
+                <!-- Button trigger modal -->
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal23" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Pay for Milk ₹ </h5>
+                                <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="/assets/payment/QRcode.jpg" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-4">
+            <div class="">
+                <img src="/assets/fruits.png" alt=""><br><br>
+                <h6>Fruits (One Time)</h6>
+                <h5>₹ 3,000</h5>
+                <div class="bttn">
+                    <button type="button" class="btn btn-success" data-mdb-toggle="modal"
+                        data-mdb-target="#exampleModal20">
+                        Donate
+                    </button>
+                </div>
+                <div class="modal fade" id="exampleModal20" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Pay for Fruits</h5>
+                                <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="/assets/payment/QRcode.jpg" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br>
+    </div>
+
+    <div class="row">
+        <h1>Food</h1>
+        <div class="col-md-3">
+            <div class="">
+                <div class="card"><br><br>
+                    <img src="/assets/poha.png" alt=""><br><br>
+                </div><br><br>
+                <h6>Breakfast (One Time)</h6>
+                <h5>₹ 4000</h5>
+                <div class="bttn">
+                    <button type="button" class="btn btn-success" data-mdb-toggle="modal"
+                        data-mdb-target="#exampleModal">
+                        Donate
+                    </button>
+                </div>
+                <!-- Button trigger modal -->
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Pay for Breakfast RS.4000</h5>
+                                <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="/assets/payment/QRcode.jpg" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-3">
+            <div class="">
+                <div class="card">
+                    <img src="/assets/food-imageArtboard-1-copy.png" alt="">
+                </div><br><br>
+                <h6>Lunch With Sweet (One Time)</h6>
+                <h5>₹ 8000</h5>
+                <div class="bttn">
+                    <button type="button" class="btn btn-success" data-mdb-toggle="modal"
+                        data-mdb-target="#exampleModal1">
+                        Donate
+                    </button>
+                </div>
+                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Pay for Lunch RS.6000</h5>
+                                <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="/assets/payment/QRcode.jpg" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br>
+        <div class="col-md-3">
+            <div class="">
+                <div class="card">
+                    <img src="/assets/dinner.png" alt="">
+                </div><br><br>
+                <h6>Dinner With Sweet (One Time)</h6>
+                <h5>₹ 8000</h5>
+                <div class="bttn">
+                    <button type="button" class="btn btn-success" data-mdb-toggle="modal"
+                        data-mdb-target="#exampleModal2">
+                        Donate
+                    </button>
+                </div>
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Pay for Dinner ₹.8000</h5>
+                                <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="/assets/payment/QRcode.jpg" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br>
+
+        <div class="col-md-3">
+            <div class="">
+                <div class="card">
+                    <img src="/assets/snacks/snack.jpg" alt="">
+                </div>
+                <br><br>
+                <h6>Evening Snacks (One Time)</h6>
+                <h5>₹ 3500</h5>
+                <div class="bttn">
+                    <button type="button" class="btn btn-success" data-mdb-toggle="modal"
+                        data-mdb-target="#exampleModal2">
+                        Donate
+                    </button>
+                </div>
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Pay for Dinner ₹.8000</h5>
+                                <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="/assets/payment/QRcode.jpg" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br>
+
+    </div>
+    <br> <br>
+    <div class="row">
+        <h2>Grocery </h2>
+        <br><br>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="">
+                    <img src="/assets/snacks/grocery.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6"> <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                <label class="form-check-label" for="inlineCheckbox1">Rice</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                <label class="form-check-label" for="inlineCheckbox2">Atta</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                <label class="form-check-label" for="inlineCheckbox3">Moong</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                <label class="form-check-label" for="inlineCheckbox4">Cooking Oil</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+                <label class="form-check-label" for="inlineCheckbox5">Tur Dal</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
+                <label class="form-check-label" for="inlineCheckbox6">Moong Dal</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
+                <label class="form-check-label" for="inlineCheckbox7">Chavli</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8">
+                <label class="form-check-label" for="inlineCheckbox8">Vatana </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="option9">
+                <label class="form-check-label" for="inlineCheckbox9">Matki </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="option10">
+                <label class="form-check-label" for="inlineCheckbox10">Pohe </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="option11">
+                <label class="form-check-label" for="inlineCheckbox11">Akha Moong </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox12" value="option12">
+                <label class="form-check-label" for="inlineCheckbox12">Akha Masoor </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox13" value="option13">
+                <label class="form-check-label" for="inlineCheckbox13">Sugar </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox14" value="option14">
+                <label class="form-check-label" for="inlineCheckbox14">Mirchi Powder </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox15" value="option15">
+                <label class="form-check-label" for="inlineCheckbox15">Haldi </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox16" value="option16">
+                <label class="form-check-label" for="inlineCheckbox16">Sabji Masala </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox17" value="option17">
+                <label class="form-check-label" for="inlineCheckbox17">Pulav Masala </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox18" value="option18">
+                <label class="form-check-label" for="inlineCheckbox18">Goda Masala </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox19" value="option19">
+                <label class="form-check-label" for="inlineCheckbox19">Shengdana </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox20" value="option20">
+                <label class="form-check-label" for="inlineCheckbox20">Chana </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox21" value="option21">
+                <label class="form-check-label" for="inlineCheckbox21">Chole </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox22" value="option22">
+                <label class="form-check-label" for="inlineCheckbox22"> Jire</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox23" value="option23">
+                <label class="form-check-label" for="inlineCheckbox23">Mohri </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox24" value="option24">
+                <label class="form-check-label" for="inlineCheckbox24">Suji </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox25" value="option25">
+                <label class="form-check-label" for="inlineCheckbox25">Rajma </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox26" value="option26">
+                <label class="form-check-label" for="inlineCheckbox26">Soyabin Vadi </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox27" value="option27">
+                <label class="form-check-label" for="inlineCheckbox27">Hygience Kit</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox28" value="option28">
+                <label class="form-check-label" for="inlineCheckbox28">Medicine</label>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Name:</label> <br>
+                    <input placeholder="Enter Name" name="customer_name" class="input" required>
+                    <br><br>
+                </div>
+                <div class="col-md-6">
+                    <label>Email:</label><br>
+                    <input name="email" placeholder="Enter Email" class="input" required>
+                    <br><br>
+                </div>
+                <div class="col-md-6">
+                    <label>Contact No.:</label><br>
+                    <input name="phone" placeholder="Enter Contact number" class="input" required>
+                    <br><br>
+                </div>
+                <div class="col-md-6">
+                    <label>Contact No.:</label><br>
+                    <input name="phone" placeholder="Enter Contact number" class="input" required>
+                    <br><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <label>Message :</label> <br>
+                <textarea placeholder="Enter Name" name="customer_name" class="input" required> </textarea>
+                <br><br>
+            </div>
+            <br>
+            <div class="text-center">
+                <div>
+                    <button class="btn btn-success btn-lg" type="submit"> <b>Submit Now</b> </button>
+                </div>
+            </div>
+            <!-- <div class="bttn">
+                <button type="button" class="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
+                    Donate
+                </button>
+            </div> -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Pay for Grocery </h5>
+                            <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="/assets/payment/QRcode.jpg" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br> <br> <br>
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Clothes</h3> <br>
+            <img src="/assets/Rectangle 20.png" alt=""> <br> <br>
+            <div class="bttn">
+                <button type="button" class="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#exampleModal5">
+                    Donate
+                </button>
+            </div>
+            <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Pay for Clothes</h5>
+                            <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p style="font-size: large;"> <span
+                                    style="font-weight: bold;font-size: larger;">Address</span>: Near Rajeshwari Nagari,
+                                Bakori Phata,
+                                Wagholi, Haveli, Pune, Maharashtra 412207
+                            </p>
+                            <hr>
+                            <p>For Fund</p>
+                            <img src="/assets/payment/QRcode.jpg" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div> <br>
+        <div class="col-md-4">
+            <h3>Carpets</h3> <br>
+            <img src="/assets/Rectangle 23.png" alt=""> <br> <br>
+            <div class="bttn">
+                <button type="button" class="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#exampleModal6">
+                    Donate
+                </button>
+            </div>
+            <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Pay for Carpets</h5>
+                            <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p style="font-size: large;"> <span
+                                    style="font-weight: bold;font-size: larger;">Address</span>: Near Rajeshwari Nagari,
+                                Bakori Phata,
+                                Wagholi, Haveli, Pune, Maharashtra 412207
+                            </p>
+                            <hr>
+                            <p>For Fund</p>
+                            <img src="/assets/payment/QRcode.jpg" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div> <br>
+
+        <div class="col-md-4">
+            <h3>Medicine</h3><br>
+            <img src="/assets/Rectangle 23 (1).png" alt=""> <br> <br>
+            <div class="bttn">
+                <button type="button" class="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#exampleModal7">
+                    Donate
+                </button>
+            </div>
+            <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Pay for Medicine</h5>
+                            <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p style="font-size: large;"> <span
+                                    style="font-weight: bold;font-size: larger;">Address</span>: Near Rajeshwari Nagari,
+                                Bakori Phata,
+                                Wagholi, Haveli, Pune, Maharashtra 412207
+                            </p>
+                            <hr>
+                            <p>For Fund</p>
+                            <img src="/assets/payment/QRcode.jpg" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+        </div> <br>
+    </div>
+
+    <br><br>
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Learning Aparatus</h3><br>
+            <img src="/assets/learning Appreances.jpg" class="rounded" alt=""> <br> <br>
+            <div class="bttn">
+                <button type="button" class="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#exampleModal8">
+                    Donate
+                </button>
+            </div>
+            <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Pay For Learning Apparatus </h5>
+                            <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p style="font-size: large;"> <span
+                                    style="font-weight: bold;font-size: larger;">Address</span>: Near Rajeshwari Nagari,
+                                Bakori Phata,
+                                Wagholi, Haveli, Pune, Maharashtra 412207
+                            </p>
+                            <hr>
+                            <p>For Fund</p>
+                            <img src="/assets/payment/QRcode.jpg" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br>
+
+        <div class="col-md-4">
+            <h3>Ear machines</h3><br>
+            <img src="/assets/machine.png" alt=""> <br> <br>
+            <div class="bttn">
+                <button type="button" class="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#exampleModal9">
+                    Donate
+                </button>
+            </div>
+            <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Pay for Ear Machine</h5>
+                            <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p style="font-size: large;"> <span
+                                    style="font-weight: bold;font-size: larger;">Address</span>: Near Rajeshwari Nagari,
+                                Bakori Phata,
+                                Wagholi, Haveli, Pune, Maharashtra 412207
+                            </p>
+                            <hr>
+                            <p>For Fund</p>
+                            <img src="/assets/payment/QRcode.jpg" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br>
+
+        <div class="col-md-4">
+            <h3>Notebooks</h3><br>
+            <img src="/assets/note.jpg" class="rounded" alt=""> <br> <br>
+            <div class="bttn">
+                <button type="button" class="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#exampleModal10">
+                    Donate
+                </button>
+            </div>
+            <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Pay for Notebooks</h5>
+                            <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p style="font-size: large;"> <span
+                                    style="font-weight: bold;font-size: larger;">Address</span>: Near Rajeshwari Nagari,
+                                Bakori Phata,
+                                Wagholi, Haveli, Pune, Maharashtra 412207
+                            </p>
+                            <hr>
+                            <p>For Fund</p>
+                            <img src="/assets/payment/QRcode.jpg" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+        </div> <br>
+    </div>
+
+    <br><br>
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Books for library</h3><br>
+            <img src="/assets/librarybook.jpg" class="rounded" alt=""> <br> <br>
+            <div class="bttn">
+                <button type="button" class="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#exampleModal11">
+                    Donate
+                </button>
+            </div>
+            <div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Pay for Books</h5>
+                            <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p style="font-size: large;"> <span
+                                    style="font-weight: bold;font-size: larger;">Address</span>: Near Rajeshwari Nagari,
+                                Bakori Phata,
+                                Wagholi, Haveli, Pune, Maharashtra 412207
+                            </p>
+                            <hr>
+                            <p>For Fund</p>
+                            <img src="/assets/payment/QRcode.jpg" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br>
+        <div class="col-md-4">
+            <h3>Sports material</h3><br>
+            <img src="/assets/sports.jpg" class="rounded" alt=""> <br> <br>
+            <div class="bttn">
+                <button type="button" class="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#exampleModal12">
+                    Donate
+                </button>
+            </div>
+            <div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Pay for Sports Material</h5>
+                            <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p style="font-size: large;"> <span
+                                    style="font-weight: bold;font-size: larger;">Address</span>: Near Rajeshwari Nagari,
+                                Bakori Phata,
+                                Wagholi, Haveli, Pune, Maharashtra 412207
+                            </p>
+                            <hr>
+                            <p>For Fund</p>
+                            <img src="/assets/payment/QRcode.jpg" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+        </div> <br>
+        <div class="col-md-4">
+            <h3>Papers</h3><br>
+            <img src="/assets/paper.jpg" class="rounded" alt=""> <br> <br>
+            <div class="bttn">
+                <button type="button" class="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#exampleModal13">
+                    Donate
+                </button>
+            </div>
+            <div class="modal fade" id="exampleModal13" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Pay for Papers</h5>
+                            <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p style="font-size: large;"> <span
+                                    style="font-weight: bold;font-size: larger;">Address</span>: Near Rajeshwari Nagari,
+                                Bakori Phata,
+                                Wagholi, Haveli, Pune, Maharashtra 412207
+                            </p>
+                            <hr>
+                            <p>For Fund</p>
+                            <img src="/assets/payment/QRcode.jpg" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+        </div> <br>
+
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Computers for Physically
+                Challenged Children</h3>
+            <img src="/assets/Rectangle 33.png" alt=""> <br> <br>
+            <div class="bttn">
+                <button type="button" class="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#exampleModal14">
+                    Donate
+                </button>
+            </div>
+            <div class="modal fade" id="exampleModal14" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Pay for computers</h5>
+                            <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p style="font-size: large;"> <span
+                                    style="font-weight: bold;font-size: larger;">Address</span>: Near Rajeshwari Nagari,
+                                Bakori Phata,
+                                Wagholi, Haveli, Pune, Maharashtra 412207
+                            </p>
+                            <hr>
+                            <p>For Fund</p>
+                            <img src="/assets/payment/QRcode.jpg" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br>
+
+        <div class="col-md-4">
+            <h3>Lab apparatus</h3> <br>
+            <img src="/assets/lab.jpg" class="rounded" alt=""> <br> <br>
+            <div class="bttn">
+                <button type="button" class="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#exampleModal15">
+                    Donate
+                </button>
+            </div>
+            <div class="modal fade" id="exampleModal15" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Pay for Lab Apparatus</h5>
+                            <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p style="font-size: large;"> <span
+                                    style="font-weight: bold;font-size: larger;">Address</span>: Near Rajeshwari Nagari,
+                                Bakori Phata,
+                                Wagholi, Haveli, Pune, Maharashtra 412207
+                            </p>
+                            <hr>
+                            <p>For Fund</p>
+                            <img src="/assets/payment/QRcode.jpg" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br>
+
+        <div class="col-md-4">
+            <h3>Old furniture’s</h3>
+            <br>
+            <img src="/assets/furniture.jpg" class="rounded" alt="">
+            <br> <br>
+            <div class="bttn">
+                <button type="button" class="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#exampleModal16">
+                    Donate
+                </button>
+            </div>
+            <div class="modal fade" id="exampleModal16" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Pay</h5>
+                            <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p style="font-size: large;"> <span
+                                    style="font-weight: bold;font-size: larger;">Address</span>: Near Rajeshwari Nagari,
+                                Bakori Phata,
+                                Wagholi, Haveli, Pune, Maharashtra 412207
+                            </p>
+                            <hr>
+                            <p>For Fund</p>
+                            <img src="/assets/payment/QRcode.jpg" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <br>
+        </div> <br>
+    </div>
+</div>
+<br>
+
+
+
+<div class="container">
+    <br>
+    <h1> Sponsor a child and support a child in need</h1> <br>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="">
+                <img src="/assets/gallery/Abhijit Katke.jpg" alt=""><br><br>
+                <h6>Single Child (Yearly)</h6>
+                <h5>₹ 24,000</h5>
+                <button class="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#donationModal"
+                    (click)="setDonation(24000, 'Single Child')">Donate</button>
+                <br>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-4">
+            <div class="">
+                <img src="/assets/gallery/IMG_20191014_132652.jpg" alt=""><br><br>
+                <h6>Multiple Child (Yearly)</h6>
+                <h5 style="display: flex; align-items: center;">
+                    ₹ 24,000 x
+                    <select class="form-select ms-2 me-2" style="width: 70px;  height: 10%;"
+                        [(ngModel)]="selectedQuantity" (change)="updateTotal()">
+                        <option *ngFor="let qty of quantities" [value]="qty">{{ qty }}</option>
+                    </select>
+                    = ₹{{ totalAmount | number:'1.0-0' }}
+                </h5>
+                <button class="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#donationModal"
+                    (click)="setDonation(totalAmount, 'Multiple Child')">Donate</button>
+            </div> <br>
+        </div> <br>
+    </div>
+    <br>
+</div>
+
+<div class="container-fluid">
+    <div class="card" style="background-color: rgb(141, 195, 34); color: white;">
+        <div class="text-center" style="padding: 5px;">
+            <h1 style="font-size:35px">We appreciate your cooperation in keeping our facility clean <br> by not bringing
+                in external food items.</h1>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="container">
+    <div class="row">
+        <h1>Nutritional Food</h1>
+        <div class="col-md-4" *ngFor="let item of fixedDonations">
+            <div class="card">
+                <img [src]="item.img" alt="">
+            </div> <br>
+            <h6>{{ item.label }}</h6>
+            <h5>₹ {{ item.amount }}</h5>
+            <button class="btn btn-success" data-mdb-toggle="modal" data-mdb-target="#donationModal"
+                (click)="setDonation(item.amount, item.label)">Donate</button> <br><br>
+        </div> <br> <br>
+
+    </div>
+
+    <br> <br>
+    <div class="row">
+        <h2>Grocery </h2>
+        <br><br>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="">
+                    <img src="/assets/snacks/grocery.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6"> <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                <label class="form-check-label" for="inlineCheckbox1">Rice</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                <label class="form-check-label" for="inlineCheckbox2">Atta</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                <label class="form-check-label" for="inlineCheckbox3">Moong</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                <label class="form-check-label" for="inlineCheckbox4">Cooking Oil</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+                <label class="form-check-label" for="inlineCheckbox5">Tur Dal</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
+                <label class="form-check-label" for="inlineCheckbox6">Moong Dal</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
+                <label class="form-check-label" for="inlineCheckbox7">Chavli</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8">
+                <label class="form-check-label" for="inlineCheckbox8">Vatana </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="option9">
+                <label class="form-check-label" for="inlineCheckbox9">Matki </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="option10">
+                <label class="form-check-label" for="inlineCheckbox10">Pohe </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="option11">
+                <label class="form-check-label" for="inlineCheckbox11">Akha Moong </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox12" value="option12">
+                <label class="form-check-label" for="inlineCheckbox12">Akha Masoor </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox13" value="option13">
+                <label class="form-check-label" for="inlineCheckbox13">Sugar </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox14" value="option14">
+                <label class="form-check-label" for="inlineCheckbox14">Mirchi Powder </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox15" value="option15">
+                <label class="form-check-label" for="inlineCheckbox15">Haldi </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox16" value="option16">
+                <label class="form-check-label" for="inlineCheckbox16">Sabji Masala </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox17" value="option17">
+                <label class="form-check-label" for="inlineCheckbox17">Pulav Masala </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox18" value="option18">
+                <label class="form-check-label" for="inlineCheckbox18">Goda Masala </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox19" value="option19">
+                <label class="form-check-label" for="inlineCheckbox19">Shengdana </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox20" value="option20">
+                <label class="form-check-label" for="inlineCheckbox20">Chana </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox21" value="option21">
+                <label class="form-check-label" for="inlineCheckbox21">Chole </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox22" value="option22">
+                <label class="form-check-label" for="inlineCheckbox22"> Jire</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox23" value="option23">
+                <label class="form-check-label" for="inlineCheckbox23">Mohri </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox24" value="option24">
+                <label class="form-check-label" for="inlineCheckbox24">Suji </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox25" value="option25">
+                <label class="form-check-label" for="inlineCheckbox25">Rajma </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox26" value="option26">
+                <label class="form-check-label" for="inlineCheckbox26">Soyabin Vadi </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox27" value="option27">
+                <label class="form-check-label" for="inlineCheckbox27">Hygience Kit</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox28" value="option28">
+                <label class="form-check-label" for="inlineCheckbox28">Medicine</label>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Name:</label> <br>
+                    <input placeholder="Enter Name" name="customer_name" class="input" required>
+                    <br><br>
+                </div>
+                <div class="col-md-6">
+                    <label>Email:</label><br>
+                    <input name="email" placeholder="Enter Email" class="input" required>
+                    <br><br>
+                </div>
+                <div class="col-md-6">
+                    <label>Contact No.:</label><br>
+                    <input name="phone" placeholder="Enter Contact number" class="input" required>
+                    <br><br>
+                </div>
+                <div class="col-md-6">
+                    <label>Contact No.:</label><br>
+                    <input name="phone" placeholder="Enter Contact number" class="input" required>
+                    <br><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <label>Message :</label> <br>
+                <textarea placeholder="Enter Name" name="customer_name" class="input" required> </textarea>
+                <br><br>
+            </div>
+            <br>
+            <div class="text-center">
+                <div>
+                    <button class="btn btn-success btn-lg" type="submit"> <b>Submit Now</b> </button>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Pay for Grocery </h5>
+                            <button type="button" class="btn-close" data-mdb-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="/assets/payment/QRcode.jpg" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br> <br> <br>
+
+</div>
+
+<!-- Donation Modal -->
+<div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form (ngSubmit)="initiatePayment()">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pay for {{ selectedCategory }}</h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label>Amount:</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i
+                                class="fa-solid fa-indian-rupee-sign"></i></span>
+                        <input [(ngModel)]="order.order_amount" name="amount" class="form-control" readonly />
+                    </div>
+
+                    <label class="mt-2">Name:</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                        <input [(ngModel)]="order.customer_details.customer_name" name="customer_name"
+                            class="form-control" required />
+                    </div>
+
+                    <label class="mt-2">Email:</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-envelope"></i></span>
+                        <input [(ngModel)]="order.customer_details.customer_email" name="email" class="form-control"
+                            required />
+                    </div>
+
+                    <label class="mt-2">Contact No.:</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-phone"></i></span>
+                        <input [(ngModel)]="order.customer_details.customer_phone" name="phone" class="form-control"
+                            required />
+                    </div>
+
+                    <label class="mt-2">PAN No:</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-id-card-clip"></i></span>
+                        <input [(ngModel)]="order.customer_details.customer_panNo" name="panNo" class="form-control"
+                            required />
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Pay Now</button>
+                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

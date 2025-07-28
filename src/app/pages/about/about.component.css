@@ -1,0 +1,35 @@
+.main{
+    background-color: #526756;
+    color: white;
+    text-align: center;
+}
+
+.main h1{
+    padding: 2%;
+}
+
+h5{
+    text-align: center;
+}
+
+.og{
+    background-color: #526756;
+    color: white;
+}
+
+.g{
+    background-color: #18a058;
+    color: white;
+}
+
+.card{
+    height: 100%;
+    padding: 1%;
+}
+
+img{
+    width: 100%;
+}
+.cardphoto{
+    padding: 0%;
+}

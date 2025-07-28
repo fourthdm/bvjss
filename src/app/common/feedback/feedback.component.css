@@ -1,0 +1,117 @@
+.sticky-notes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: rgb(92, 18, 18);
+    /* background-color: white; */
+    padding: 2%;
+    border: 5px solid #cdcba4;
+    border-radius: 10px;
+}
+
+.blogs {
+    color: white;
+}
+
+.active {
+    color: #979436 !important;
+}
+
+.note {
+    background: #979436;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transform: rotate(-2deg);
+    position: relative;
+    font-size: 16px;
+    line-height: 1.4;
+    border: 1px solid #e4e4a1;
+    border-radius: 10px;
+    font-family: cursive, sans-serif;
+    color: white;
+    /* color: rgb(164, 29, 29); */
+}
+
+.note::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: #ddd;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 5px 5px 15px rgba(216, 197, 197, 0.2);
+}
+
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex: end;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-image: url('/assets/dailyreports/13.png');
+    background-size: cover;
+    background: #88841a83;
+    background-blend-mode: lighten;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    /* width: 80%; */
+    border: 2px solid #979436;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+i {
+    color: white;
+}
+
+input {
+    background: none;
+}
+
+textarea {
+    background: none;
+}
+
+label {
+    color: white;
+}
+
+::placeholder {
+    color: white;
+    opacity: 1;
+    /* Firefox */
+}
+
+::-ms-input-placeholder {
+    color: white;
+}
+
+select {
+    background: none;
+}
+
+span {
+    font-size: 20px;
+}
+
+img {
+    width: 100%;
+}
+
+.bttn {
+    text-align: end;
+}

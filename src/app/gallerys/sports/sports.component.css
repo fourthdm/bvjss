@@ -1,0 +1,48 @@
+/* @import '~lightgallery/scss/lightgallery'; */
+/* img {
+    width: 100%;
+} */
+
+h1 {
+  color: #ad5229;
+  text-shadow: #9ca60bde 1px 0 10px;
+}
+
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css');
+body {
+margin: 0;
+}
+.gallery-item {
+margin: 15px;
+display: inline-block;
+margin-bottom: 5%;
+}
+
+a{
+  margin: 5px;
+  margin-bottom: 5%;
+  height: 80%;
+  width: 80%;
+}
+
+img{
+  width: 30%;
+  border: 1px solid gray;
+  padding: 2px;
+  margin-bottom: 2%;
+}
+
+.ul {
+font-size: 16px;
+list-style: none;
+color: black;
+}
+
+.ul img{
+width: 50%;
+}
+
+.ul img:hover{
+transform: scale(1.1);
+}

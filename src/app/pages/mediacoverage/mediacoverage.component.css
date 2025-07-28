@@ -1,0 +1,45 @@
+.main {
+    background-color: #526756;
+    color: white;
+    text-align: center;
+}
+
+.main h1 {
+    padding: 2%;
+}
+
+.img {
+    height: 45rem;
+}
+
+@media(max-width:1440px){
+    .img{
+        width: auto;
+        height: 40rem;
+    }
+}
+
+@media(max-width:768px){
+    .img{
+        width: auto;
+        height: auto;
+    }
+}
+
+@media(max-width:439px) {
+    .img {
+        height: auto;
+    }
+}
+
+.carousel-control-prev {
+    position: absolute;
+    /* bottom: 20px; */
+    left:5px;
+}
+
+.carousel-control-next {
+    position: absolute;
+    /* bottom: 20px; */
+    right: 5px;
+}

@@ -1,0 +1,28 @@
+.main {
+    background-color: #526756;
+    /* color: white; */
+    text-align: center;
+}
+
+.main h1 {
+    padding: 2%;
+}
+
+.card {
+    background-color: #d9d9d9;
+    margin-inline-start: 30%;
+    margin-inline-end: 30%;
+    border: 2px solid black;
+    border-radius: 0%;
+}
+
+.photo {
+    text-align: center;
+    color: black;
+}
+
+.whytext {
+    font-size: 45px;
+    font-weight: 550;
+    color: black;
+}

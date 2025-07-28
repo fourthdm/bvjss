@@ -1,0 +1,443 @@
+<div class="container-fluid">
+
+
+    <div class="container">
+        <div class="col-md-8">
+            <div class="popup-overlay" *ngIf="showPopup">
+                <div class="popup-content">
+                    <div class="text-end">
+                        <span (click)="closePopup()"><i class="fa-solid fa-xmark"></i></span>
+                    </div>
+                    <div class="text-center">
+                        <h2 style="color: white;">Be a Part of Our Story</h2>
+                    </div> <br>
+                    <form action="" (ngSubmit)="submitEnquiry()">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fa-solid fa-user fa-xl"></i></span>
+                                    <input type="text" class="form-control" placeholder="First Name"
+                                        aria-label="FirstName" aria-describedby="basic-addon1" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fa-solid fa-user fa-xl"></i></span>
+                                    <input type="text" class="form-control" placeholder="Last Name"
+                                        aria-label="LastName" aria-describedby="basic-addon1" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fa-solid fa-envelope fa-xl"></i></span>
+                                    <input type="text" class="form-control" placeholder="Email Address"
+                                        aria-label="Username" aria-describedby="basic-addon1" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fa-solid fa-phone fa-xl"></i></span>
+                                    <input type="text" class="form-control" placeholder="Contact Number"
+                                        aria-label="Username" aria-describedby="basic-addon1" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="Project Scope" class="form-label">Message :</label> <br>
+                            <textarea class="form-control" aria-label="With textarea"
+                                placeholder="Write your Message"></textarea>
+                        </div>
+                        <br>
+
+                        <button type="submit" class="btn btn-success btn-lg"> Submit </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <h1 style="color: black;"> <b>Feedback By Visitor's</b> </h1>
+    </div> <br>
+
+    <div class="container-fluid">
+
+        <div class="container">
+            <div class="text-center">
+                <div class="text-end">
+                    <div class="bttn">
+                        <button type="button" class="btn btn-lg btn-success" data-mdb-toggle="modal"
+                            data-mdb-target="#exampleModal2">
+                            <b>How Was Your Journey with Us?</b>
+                        </button>
+                    </div>
+                </div>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                            data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                            aria-selected="true"><b style="font-size: large;">Feedback</b></button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                            data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane"
+                            aria-selected="false"><b style="font-size: medium;">Video Feedback</b></button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                            aria-selected="false"><b style="font-size: large;">Blogs</b></button>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <br>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <h2 style="text-align: center;">Feedback</h2>
+                <div class="sticky-notes">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="note">Respected Members of BVJSS, <br>
+                                I have been coming here since 5 to 6 years and an impressed by the continuous efforts of
+                                you this is
+                                not an
+                                easy task to have the patience and
+                                conguage to run an institution of this size with all basic neccesities and helping kids
+                                and everyone
+                                statisfied.
+                                <br> Hatts of to Dr.Shivlalji and everyone who is associated with this institution.
+                                Directly or Indirectly. <br>
+                                God Bless !!! <br> <br>
+                                <span> By: Sushobhan Das.</span>
+                            </div> <br>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="note">
+                                The School environment is very good. everything is maintained is well organised manner
+                                students
+                                are in discipline
+                                and highly cooperative. staff of the school is very polity and helping out all students
+                                in good
+                                manner. <br>
+                                they care taking all kind of efforts to enculcate good manners in children. <br>
+                                I feel very good when i came here thank you for your efforts that you are taking to keep
+                                all
+                                these children in blessed place.
+                                <br> <br>
+                                <span> By: Kirti Janpade.</span>
+                            </div> <br>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="note">
+                                Respected Sir,
+                                <br> Thanking you first of all the lovely experience i can delighted to see such good
+                                management,cleanliness & hygience maintained
+                                in the permises lots of blessings to all the kids and people managing and involved in
+                                it. <br>
+                                Will be always greatful to get involved in any assistance needed.
+                                <br>
+                                Thanks once again. <br><br>
+                                <span>By: Shutal Yatin Mehta.</span>
+                            </div><br><br>
+                        </div><br>
+
+                        <div class="col-md-4">
+                            <div class="note">
+                                To The Management, <br> we are blessed to have a experience like this nothing is more
+                                beautiful than
+                                seeing a smile on everyones face
+                                and becoming a partof this family is study is blessing my eye's lightup when i see kids
+                                are growing
+                                up under such a good management.
+                                <br>
+                                i have never seen a orphan like this before i am always greatful to be a part of any
+                                assistance.
+                                <br>
+                                really want to thank you from bottom of my heart.
+
+                                <br> <br>
+                                <span> By: Nisha Tiwari.</span>
+                            </div> <br>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="note">
+                                Dear Team, <br>
+                                I'm so happy to see the thankful and happpy faces of all the children i meet today you
+                                doing a good
+                                job to educate and protect all the children. <br>
+                                God will bless you and all the childrens.
+                                <br>
+                                Thank you very much
+
+                                <br><br>
+                                <span> By: Jorg from Germony.</span>
+                            </div> <br>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="note">
+                                ये संस्था बहुत अच्छा काम कर रही है | बच्चे प्रसन्न है और इनके रहने की व्यवस्था बहुत ही
+                                अभूतपूर्व है
+                                | संसाधनो की कमी के बावजूद विद्यालय किसी तरह सब बच्चों के लिये ठीक ढंग से प्रबधं कर रहा
+                                है | प्रबंध
+                                करने वाले बधाई के पात्र है |
+                                <br>
+                                शुभ कामनाऐं ||
+                                <br> <br>
+                                <span>महेन्द्रपाल रुस्तगी।</span>
+                            </div> <br>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="note">
+                                Respected all the family member of BVJSS,
+                                <br>
+                                I am very thankful to the God and your family members to give me a opportunity to see a
+                                happy
+                                childrens growing up, learning and getting a good education here
+                                I am very happy along with my family members (sponse Mrs.Priyanka Bhagat, Daughter
+                                Ms.Dikha
+                                Bhagat) to contribute whatever possible for BVJSS family. <br>
+                                All students are very energetic, disciplined and happy .
+                                God bles to all children and pray to God t give them a happy and successful life. <br>
+                                Thank you very much !! All the best BVJSS.
+
+                                <br> <br>
+                                <span> By: Amit Kumar Bhagat</span>
+                            </div> <br>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="note">
+                                Respected Jadhav Sir,
+                                <br>
+                                Thanks on behalf of our club for arranging lunch with children today.
+                                we were very touched and felt happy to visit your school.
+                                we wish you all the very best for all your future endeavour.
+                                <br> <br>
+                                <span> By:Satish L Jawalkar <br>
+                                    President</span>
+                            </div> <br>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="note">
+                                Respected Shri Jadhav Sir,
+                                <br>
+                                It was very nice to meet your BVJSS, Wagholi, Pune Sanstha & all your staff.
+                                it was our pleasure to be with you all and your childrens/students, we are highly
+                                impressed by your
+                                devoted activities to words the childrens and all types of infrastructure/ activities.
+                                We wish you All THE BEST for future. <br>
+                                God bless you all <br>
+                                Thanks.
+                                <br> <br>
+                                <span> By:S.B.Bomale </span><br>
+                            </div> <br>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <div class="text-center">
+                    <h2>Blogs</h2>
+                </div>
+
+                <div class="sticky-notes">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-0"></div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="card1">
+                                        <div class="card-body">
+                                            <img class="client" src="/assets/blogsimg/Mr. Naval Ghule.jpg" alt="">
+                                        </div>
+                                    </div> <br>
+                                    <div class="text-center">
+                                        <h5 style="color: white;">Mr.Naval Ghule</h5>
+                                    </div>
+                                </div> <br>
+                            </div>
+
+                            <p></p>
+                        </div>
+                        <div class="col-md-8"> <br><br> <br><br>
+                            <div class="container">
+                                <div class="row">
+                                    <!-- <h5 style="color: black;"><b></b></h5> -->
+                                    <p class="blogs">
+                                        I am someone who naturally prefers to work in a challenging role where I
+                                        genuinely get
+                                        to make a difference to people's lives
+                                        I did not become a social worker for financial reward. I have passion,
+                                        commitment and
+                                        dedication for social work. <br><br>
+                                        Walking the streets daily with open eyes and no headphones in my ears, I
+                                        can
+                                        see the
+                                        injustice all around.
+                                        And while I know I am not going to change the world, but I also know
+                                        that I
+                                        can make a
+                                        difference in lives of some people on that street.
+
+                                        That’s why I opted for social work, I understand the impact of such a
+                                        poor
+                                        and orphaned
+                                        child and the challenges such a family faces.
+                                        That is why I am helping as much as I can in the field of social
+                                        welfare..
+                                    </p>
+
+                                </div>
+                            </div>
+
+
+                            <br><br>
+                        </div>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                <div class="text-center">
+                    <h2>Video Feedback</h2>
+                </div>
+                <div class="sticky-notes">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="ratio ratio-16x9">
+                                            <video controls loop onloadedmetadata="this.muted = true">
+                                                <source src="/assets/gallery/video/bvjss.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div> <br>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="ratio ratio-16x9">
+                                            <video controls loop onloadedmetadata="this.muted = true">
+                                                <source src="/assets/gallery/video/Feedbackmastercard.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div> <br>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="ratio ratio-16x9">
+                                            <video controls loop onloadedmetadata="this.muted = true">
+                                                <source src="/assets/gallery/video/Mastercardteamfeedback.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div> <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style=" background: #979436;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color: white;"> Write Your Experience</h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" (ngSubmit)="submitEnquiry()">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fa-solid fa-user fa-xl"></i></span>
+                                    <input type="text" class="form-control" placeholder="First Name"
+                                        aria-label="FirstName" aria-describedby="basic-addon1" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fa-solid fa-user fa-xl"></i></span>
+                                    <input type="text" class="form-control" placeholder="Last Name"
+                                        aria-label="LastName" aria-describedby="basic-addon1" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fa-solid fa-envelope fa-xl"></i></span>
+                                    <input type="text" class="form-control" placeholder="Email Address"
+                                        aria-label="Username" aria-describedby="basic-addon1" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fa-solid fa-phone fa-xl"></i></span>
+                                    <input type="text" class="form-control" placeholder="Contact Number"
+                                        aria-label="Username" aria-describedby="basic-addon1" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="Project Scope" class="form-label">Message :</label> <br>
+                            <textarea class="form-control" aria-label="With textarea" placeholder="Message"></textarea>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-lg" data-mdb-dismiss="modal"
+                        (click)="closePopup()">Close</button>
+                    <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div><br><br>

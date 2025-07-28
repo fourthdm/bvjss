@@ -1,0 +1,188 @@
+.main {
+    background-color: #526756;
+    color: white;
+    text-align: center;
+}
+
+.main h1 {
+    padding: 2%;
+}
+
+img {
+    width: 100%;
+}
+
+.carousel-control-prev {
+    position: absolute;
+    /* bottom: 20px; */
+    left: -10%;
+}
+
+.carousel-control-next {
+    position: absolute;
+    /* bottom: 20px; */
+    right: -10%;
+}
+
+@media(max-width:414px) {
+    .carousel-control-next {
+        position: absolute;
+        /* bottom: 20px; */
+        right: -1%;
+    }
+
+    .carousel-control-prev {
+        position: absolute;
+        /* bottom: 20px; */
+        left: -1%;
+    }
+}
+
+h3{
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .img{
+    max-height: 50rem;
+} */
+
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color:#9ca60bde;
+    opacity: 0.9;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+  }
+  .card:hover .overlay {
+    bottom: 0;
+    height: 100%;
+  }
+  
+  .text {
+    color:white;
+    font-size: 30px;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }  
+
+
+  .cardt{
+    background-color: #9ca60bde;
+    color: white;
+    width: 40%;
+    height:50px;
+    text-align: center;
+    transform: translate(75%);
+  }
+
+
+
+/* for displaying a text on images */
+.modulartext{ 
+    background-color:#9ca60bde;
+    opacity: 0.8;
+    width: 50%;
+    transform: translate(50%,5%);
+    margin-top: -20%;
+    color: white;
+    width: 50%;
+    transform: translate(50%,5%);
+}
+.modulartext:hover{
+  opacity: 0.11;
+}
+
+.wardrobe{ 
+  background-color:#3A3B3C;
+  padding: 1%;
+  /* opacity: 0.8; */
+  width: 50%;
+  transform: translate(50%,5%);
+  margin-top: -10%;
+  color: #9ca60bde;
+  width: 50%;
+  transform: translate(50%,5%);
+}
+
+@media(max-width:414px){
+  .container{
+    padding: 10%;
+  }
+  .para{
+    font-size: 40px;
+  }
+  .cardt{
+    transform: translate(0%);
+    width: 100%;
+  }
+}
+
+@media (max-width:1440px){
+  .cardt{
+    transform: translate(75%);
+  }
+}
+
+@media (max-width:760px){
+  .cardt{
+    transform: translate(0%);
+    width: 100%;
+  }
+}
+
+.i{
+  font-size: 15px;
+}
+
+.i:hover{
+  text-decoration: underline;
+  color: #9ca60bde;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #9ca60bde;
+  opacity: 0.9;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.card:hover .overlay2 {
+  width: 100%;
+}
+
+.card:hover .overlay {
+  height: 100%;
+}
