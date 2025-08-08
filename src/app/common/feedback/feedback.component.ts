@@ -1,4 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { RestService } from 'src/app/services/rest.service';
 
 @Component({
   selector: 'app-feedback',
@@ -7,14 +9,25 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class FeedbackComponent implements OnInit {
 
+  Feedbackform: FormGroup;
+  Allfeedback: any[] = [];
+
   showPopup = false;
-  enquiryData = { name: '', email: '', message: '' }; // Form data model
   interval: any;
 
-  constructor() { }
+  constructor(private rest: RestService) {
+    this.Feedbackform = new FormGroup({
+      name: new FormControl('', [Validators.required]),
+      lastname: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required]),
+      contactno: new FormControl('', [Validators.required]),
+      message: new FormControl('', [Validators.required])
+    });
+  }
 
   ngOnInit(): void {
 
+    this.Feedback();
     this.showPopup = true;
 
     // this.interval = setInterval(() => {
@@ -29,10 +42,6 @@ export class FeedbackComponent implements OnInit {
     }
   }
 
-  submitEnquiry() {
-    console.log('Form submitted', this.enquiryData)
-    this.closePopup();
-  }
 
   closePopup() {
     this.showPopup = false;
@@ -41,4 +50,25 @@ export class FeedbackComponent implements OnInit {
   ngOnDestroy(): void {
     clearInterval(this.interval);
   }
+
+  Addfeedback() {
+    this.rest.Addfeedback(this.Feedbackform.value).subscribe((data: any) => {
+      console.log(data)
+      this.Allfeedback.push();
+      this.Feedbackform.reset();
+      this.closePopup();
+    }, (err: any) => {
+      console.log(err)
+    })
+  }
+
+  Feedback() {
+    this.rest.Allfeedback().subscribe((data: any) => {
+      this.Allfeedback = data.data;
+      console.log(data);
+    }, (err: any) => {
+      console.log(err);
+    });
+  }
+
 }

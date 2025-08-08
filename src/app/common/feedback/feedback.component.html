@@ -11,22 +11,23 @@
                     <div class="text-center">
                         <h2 style="color: white;">Be a Part of Our Story</h2>
                     </div> <br>
-                    <form action="" (ngSubmit)="submitEnquiry()">
+                    <form [formGroup]="Feedbackform" (ngSubmit)="Addfeedback()">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1"><i
                                             class="fa-solid fa-user fa-xl"></i></span>
-                                    <input type="text" class="form-control" placeholder="First Name"
-                                        aria-label="FirstName" aria-describedby="basic-addon1" />
+                                    <input type="text" class="form-control" placeholder="First_Name"
+                                        formControlName="name" aria-label="FirstName" aria-describedby="basic-addon1" />
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1"><i
                                             class="fa-solid fa-user fa-xl"></i></span>
-                                    <input type="text" class="form-control" placeholder="Last Name"
-                                        aria-label="LastName" aria-describedby="basic-addon1" />
+                                    <input type="text" class="form-control" placeholder="Last_Name"
+                                        formControlName="lastname" aria-label="LastName"
+                                        aria-describedby="basic-addon1" />
                                 </div>
                             </div>
                         </div>
@@ -37,7 +38,7 @@
                                     <span class="input-group-text" id="basic-addon1"><i
                                             class="fa-solid fa-envelope fa-xl"></i></span>
                                     <input type="text" class="form-control" placeholder="Email Address"
-                                        aria-label="Username" aria-describedby="basic-addon1" />
+                                        formControlName="email" aria-label="email" aria-describedby="basic-addon1" />
                                 </div>
                             </div>
 
@@ -46,14 +47,16 @@
                                     <span class="input-group-text" id="basic-addon1"><i
                                             class="fa-solid fa-phone fa-xl"></i></span>
                                     <input type="text" class="form-control" placeholder="Contact Number"
-                                        aria-label="Username" aria-describedby="basic-addon1" />
+                                        formControlName="contactno" aria-label="contactno"
+                                        aria-describedby="basic-addon1" />
+
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <label for="Project Scope" class="form-label">Message :</label> <br>
-                            <textarea class="form-control" aria-label="With textarea"
+                            <textarea class="form-control" aria-label="With textarea" formControlName="message"
                                 placeholder="Write your Message"></textarea>
                         </div>
                         <br>
@@ -111,6 +114,21 @@
             <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
                 tabindex="0">
                 <h2 style="text-align: center;">Feedback</h2>
+
+                <div class="sticky-notes">
+                    <div class="row">
+                        <div class="col-md-4" *ngFor="let f of Allfeedback, let i = index">
+                            <div class="note">
+                                {{f.message}} <br> <br>
+                                <span class="span"> By: {{f.name}} {{f.lastname}}.</span>
+                                <div class="text-end">
+                                    <span>{{f.date | date}}</span>
+                                </div>
+                            </div> <br>
+                        </div> <br>
+                    </div>
+                </div>
+<!-- 
                 <div class="sticky-notes">
                     <div class="row">
                         <div class="col-md-4">
@@ -257,7 +275,7 @@
 
 
                     </div>
-                </div>
+                </div> -->
 
             </div>
 
@@ -385,22 +403,23 @@
                     <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="" (ngSubmit)="submitEnquiry()">
+                    <form [formGroup]="Feedbackform" (ngSubmit)="Addfeedback()">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1"><i
                                             class="fa-solid fa-user fa-xl"></i></span>
-                                    <input type="text" class="form-control" placeholder="First Name"
-                                        aria-label="FirstName" aria-describedby="basic-addon1" />
+                                    <input type="text" class="form-control" placeholder="First_Name"
+                                        formControlName="name" aria-label="FirstName" aria-describedby="basic-addon1" />
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="input-group mb-3">
                                     <span class="input-group-text" id="basic-addon1"><i
                                             class="fa-solid fa-user fa-xl"></i></span>
-                                    <input type="text" class="form-control" placeholder="Last Name"
-                                        aria-label="LastName" aria-describedby="basic-addon1" />
+                                    <input type="text" class="form-control" placeholder="Last_Name"
+                                        formControlName="lastname" aria-label="LastName"
+                                        aria-describedby="basic-addon1" />
                                 </div>
                             </div>
                         </div>
@@ -411,7 +430,7 @@
                                     <span class="input-group-text" id="basic-addon1"><i
                                             class="fa-solid fa-envelope fa-xl"></i></span>
                                     <input type="text" class="form-control" placeholder="Email Address"
-                                        aria-label="Username" aria-describedby="basic-addon1" />
+                                        formControlName="email" aria-label="email" aria-describedby="basic-addon1" />
                                 </div>
                             </div>
 
@@ -420,24 +439,24 @@
                                     <span class="input-group-text" id="basic-addon1"><i
                                             class="fa-solid fa-phone fa-xl"></i></span>
                                     <input type="text" class="form-control" placeholder="Contact Number"
-                                        aria-label="Username" aria-describedby="basic-addon1" />
+                                        formControlName="contactno" aria-label="contactno"
+                                        aria-describedby="basic-addon1" />
+
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-md-12">
                             <label for="Project Scope" class="form-label">Message :</label> <br>
-                            <textarea class="form-control" aria-label="With textarea" placeholder="Message"></textarea>
+                            <textarea class="form-control" aria-label="With textarea" formControlName="message"
+                                placeholder="Write your Message"></textarea>
                         </div>
                         <br>
+
+                        <button type="submit" class="btn btn-success btn-lg"> Submit </button>
                     </form>
                 </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-lg" data-mdb-dismiss="modal"
-                        (click)="closePopup()">Close</button>
-                    <button type="submit" class="btn btn-success btn-lg">Submit</button>
-                </div>
             </div>
         </div>
     </div><br><br>

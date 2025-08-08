@@ -10,6 +10,7 @@ export class CashfreeserviceService {
 
   cashfree: any;
   url = `http://localhost:8000`;
+  // url = `https://ysurveillance.com/BvjssBackend`;
 
   async initiatePayment(paymentSessionId: string) {
     this.cashfree.checkout({
@@ -50,7 +51,7 @@ export class CashfreeserviceService {
 
   async getInstance(): Promise<any> {
     const Cashfree = await this.loadSDK();
-    return Cashfree({ mode: 'TEST' });
+    return Cashfree({ mode: 'PROD' });
   }
 
 }

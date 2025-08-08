@@ -132,3 +132,32 @@ h4 {
     font-weight: 550;
     color: black;
 }
+
+.fa-angles-right {
+    padding-right: 5px;
+}
+
+.collapsed {
+    color: black;
+    font-weight: 600;
+}
+
+.accordion-active-color {
+    color: #979436;
+}
+
+.accordion-button.accordion-active-color:not(.collapsed) {
+    /* background-color: #007bff; */
+    /* Blue background */
+    /* color: white; */
+        color: #ab5129;
+    /* White text */
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* When collapsed (optional styling) */
+.accordion-button.accordion-active-color.collapsed {
+    background-color: #f8f9fa;
+    color: #212529;
+}

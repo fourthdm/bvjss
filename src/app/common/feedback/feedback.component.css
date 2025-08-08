@@ -74,8 +74,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-i {
-    color: white;
+.fa-solid {
+    color: #026ca8;
 }
 
 input {
@@ -104,7 +104,7 @@ select {
     background: none;
 }
 
-span {
+.span {
     font-size: 20px;
 }
 

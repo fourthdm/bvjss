@@ -35,6 +35,9 @@ import { SportsComponent } from './gallerys/sports/sports.component';
 import { LightgalleryModule } from 'lightgallery/angular';
 import { NgOptimizedImage } from '@angular/common';
 import { MainpageComponent } from './pages/mainpage/mainpage.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PayComponent } from './pages/pay/pay.component';
+
 
 @NgModule({
   declarations: [
@@ -63,7 +66,8 @@ import { MainpageComponent } from './pages/mainpage/mainpage.component';
     PabalComponent,
     SkillsComponent,
     SportsComponent,
-    MainpageComponent
+    MainpageComponent,
+    PayComponent
   ],
   imports: [
     BrowserModule,
@@ -71,13 +75,14 @@ import { MainpageComponent } from './pages/mainpage/mainpage.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxSpinnerModule,
+    NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' }),
     ToastrModule.forRoot({
       positionClass: 'toast-top-center', // Position at top center
       preventDuplicates: true,
     }),
     LightgalleryModule,
     NgOptimizedImage,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
