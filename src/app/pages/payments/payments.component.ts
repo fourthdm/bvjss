@@ -10,6 +10,11 @@ import confetti from 'canvas-confetti';
 
 declare const Cashfree: any;
 
+declare global {
+  interface Window { Cashfree: any; }
+}
+
+
 @Component({
   selector: 'app-payments',
   templateUrl: './payments.component.html',
@@ -59,6 +64,18 @@ export class PaymentsComponent {
   async ngOnInit() {
 
   }
+
+// async initiatePayment() {
+//   if (!window.Cashfree) {
+//     console.error('Cashfree SDK not loaded yet!');
+//     return;
+//   }
+//   await window.Cashfree.checkout({
+//     paymentSessionId: 'abc123',
+//     redirectTarget: '_modal',
+//     mode: 'PROD'
+//   });
+// }
 
   setDonation(amount: number, category: string) {
     this.selectedCategory = category;
@@ -116,14 +133,35 @@ export class PaymentsComponent {
   // }
 
 
+  async waitForCashfree(timeout = 1000): Promise<any> {
+    return new Promise((resolve, reject) => {
+      const start = Date.now();
+      const check = () => {
+        // @ts-ignore
+        if ((window as any).Cashfree && typeof (window as any).Cashfree === 'function') {
+          resolve((window as any).Cashfree);
+        } else if (Date.now() - start > timeout) {
+          reject('Cashfree SDK not loaded');
+        } else {
+          setTimeout(check, 100);
+        }
+      };
+      check();
+    });
+  }
+
+
   async initiatePayment() {
     // const cashfree = await load();
-
+    if (typeof Cashfree === 'undefined' || typeof Cashfree.checkout !== 'function') {
+      console.error('Cashfree SDK not loaded.');
+      return;
+    }
     if (!this.order.customer_details.customer_id) {
       this.order.customer_details.customer_id = `CUST${Date.now()}`;
     }
 
-    this.http.post('http://localhost:8000/token', this.order).subscribe({
+    this.http.post('https://ysurveillance.com/BvjssBackend/token', this.order).subscribe({
       next: (res: any) => {
 
         const paymentSessionId = res.payment_session_id;
@@ -137,40 +175,16 @@ export class PaymentsComponent {
         const checkoutPromise = Cashfree.checkout({
           paymentSessionId: paymentSessionId,
           redirectTarget: '_modal',
-          mode: 'PROD'
+          mode: 'production'
         });
-
-        // const paymentSessionId = res.payment_session_id;
-
-        // const checkoutPromise = cashfree.checkout({
-        //   paymentSessionId: paymentSessionId,
-        //   redirectTarget: '_modal',
-        //   mode: 'PROD' // Change to 'TEST' for testing
-        // });
 
         checkoutPromise.then((result: any) => {
           if (result.paymentDetails) {
             const { customer_name, customer_email, customer_panNo } = this.order.customer_details;
-            // this.http.post('http://localhost:8000/generate-certificate', {
-            //   name: customer_name,
-            //   email: customer_email,
-            //   panNo: customer_panNo
-            // }).subscribe({
-            //   next: () => {
-            //     // this.spinner.hide();
-            //     this.message = 'Certificate sent to your email!';
-            //     // this.toastr.success('Your certificate has been sent!', 'Success');
-            //     this.launchConfetti();
-            //   },
-            //   error: () => {
-            //     // this.spinner.hide();
-            //     // this.toastr.error('Failed to send certificate.', 'Error');
-            //   }
-            // });
 
             if (!customer_panNo && customer_panNo.trim() === '') {
               alert('You are not entered a Pan number certificate not generated.')
-              this.http.post('http://localhost:8000/generate-certificate', {
+              this.http.post('https://ysurveillance.com/BvjssBackend/generate-certificate', {
                 name: customer_name,
                 email: customer_email,
                 panNo: customer_panNo

@@ -14,15 +14,13 @@
                 <div class="text-center">
                     <h6>Single Child (Yearly)</h6>
                     <h5>₹ 24,000</h5>
-                    <a href="https://payments.cashfree.com/forms?code=singlechild" class="btn btn-success"
+                    <!-- <a href="https://payments.cashfree.com/forms?code=singlechild" class="btn btn-success"
                         target="_blank">
-                        Donate Now</a>
-
+                        Donate Now</a> -->
                     <br><br>
 
-
-                    <!-- <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#donationModal"
-                        (click)="setDonation(24000, 'Single Child')">Donate</button> -->
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#donationModal"
+                        (click)="setDonation(24000, 'Single Child')">Donate</button>
                 </div>
                 <br>
             </div>
@@ -33,21 +31,19 @@
                 <img src="/assets/gallery/IMG_20191014_132652.jpg" alt=""><br><br>
                 <div class="text-center">
                     <h6>Multiple Child (Yearly)</h6>
-                    <h5 style="display: flex; align-items: center;">
-                        ₹ 24,000 x
+                    <h5 style=" align-items: center;">
+                        ₹ 24,000
                         <select class="form-select ms-2 me-2" style="width: 70px;  height: 10%;"
                             [(ngModel)]="selectedQuantity" (change)="updateTotal()">
                             <option *ngFor="let qty of quantities" [value]="qty">{{ qty }}</option>
                         </select>
                         = ₹{{ totalAmount | number:'1.0-0' }}
                     </h5>
-                    <a href="https://payments.cashfree.com/forms/multiplechild" class="btn btn-success" target="_blank">
-                        Donate Now</a>
+                    <!-- <a href="https://payments.cashfree.com/forms/multiplechild" class="btn btn-success" target="_blank">
+                        Donate Now</a> -->
 
-
-
-                    <!-- <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#donationModal"
-                        (click)="setDonation(totalAmount, 'Multiple Child')">Donate</button> -->
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#donationModal"
+                        (click)="setDonation(totalAmount, 'Multiple Child')">Donate</button>
                 </div>
             </div> <br>
         </div> <br>
@@ -76,12 +72,12 @@
             <div class="text-center">
                 <h6>{{ item.label }}</h6>
                 <h5>₹ {{ item.amount }}</h5>
-                
-                <a href="{{item.donate}}" class="btn btn-success" >Donate </a>
+
+                <a href="{{item.donate}}" class="btn btn-success">Donate </a>
                 <!-- <a href="https://payments.cashfree.com/forms/bvjss" class="btn btn-success" target="_blank">
                     Donate Now</a> -->
-                <!-- <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#donationModal"
-                    data-mdb-dismiss="modal" (click)="setDonation(item.amount, item.label)">Donate</button> -->
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#donationModal"
+                    data-mdb-dismiss="modal" (click)="setDonation(item.amount, item.label)">Donate</button>
             </div>
             <br><br>
         </div> <br> <br>

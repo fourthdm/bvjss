@@ -43,12 +43,13 @@ export class HwlpComponent {
 
   fixedDonations = [
     {
-      label: 'Milk (One Time)', amount: 2000, img: '/assets/snacks/1.png', donate:"https://payments.cashfree.com/forms/bvjss" },
-    { label: 'Fruits (One Time)', amount: 3000, img: '/assets/snacks/2.png',donate:"https://payments.cashfree.com/forms/fruits" },
-    { label: 'Breakfast (One Time)', amount: 4000, img: '/assets/snacks/7.png',donate:"https://payments.cashfree.com/forms/bvjssbreakfast" },
-    { label: 'Lunch With Sweet (One Time)', amount: 8000, img: '/assets/snacks/6.png',donate:"https://payments.cashfree.com/forms/lunch" },
-    { label: 'Dinner With Sweet (One Time)', amount: 8000, img: '/assets/snacks/4.png',donate:"https://payments.cashfree.com/forms/lunch" },
-    { label: 'Evening Snacks (One Time)', amount: 3500, img: '/assets/snacks/5.png',donate:"https://payments.cashfree.com/forms/snack" }
+      label: 'Milk (One Time)', amount: 2000, img: '/assets/snacks/1.png', donate: "https://payments.cashfree.com/forms/bvjss"
+    },
+    { label: 'Fruits (One Time)', amount: 3000, img: '/assets/snacks/2.png', donate: "https://payments.cashfree.com/forms/fruits" },
+    { label: 'Breakfast (One Time)', amount: 4000, img: '/assets/snacks/7.png', donate: "https://payments.cashfree.com/forms/bvjssbreakfast" },
+    { label: 'Lunch With Sweet (One Time)', amount: 8000, img: '/assets/snacks/6.png', donate: "https://payments.cashfree.com/forms/lunch" },
+    { label: 'Dinner With Sweet (One Time)', amount: 8000, img: '/assets/snacks/4.png', donate: "https://payments.cashfree.com/forms/lunch" },
+    { label: 'Evening Snacks (One Time)', amount: 3500, img: '/assets/snacks/5.png', donate: "https://payments.cashfree.com/forms/snack" }
   ];
 
   order = {
@@ -123,13 +124,13 @@ export class HwlpComponent {
       this.order.customer_details.customer_id = `CUST${Date.now()}`;
     }
 
-    this.http.post('http://localhost:8000/token', this.order).subscribe({
+    this.http.post('https://ysurveillance.com/BvjssBackend/token', this.order).subscribe({
       next: (res: any) => {
         const paymentSessionId = res.payment_session_id;
         const checkoutPromise = cashfree.checkout({
           paymentSessionId: paymentSessionId,
           redirectTarget: '_modal',
-          mode: 'PROD' // Change to 'TEST' for testing
+          mode: 'production' // Change to 'TEST' for testing
         });
         checkoutPromise.then((result: any) => {
           if (result.paymentDetails) {
@@ -148,7 +149,7 @@ export class HwlpComponent {
             });
 
             //  Start certificate generation
-            this.http.post('http://localhost:8000/generate-certificate', {
+            this.http.post('https://ysurveillance.com/BvjssBackend/generate-certificate', {
               name: customer_name,
               email: customer_email,
               panNo: customer_panNo
@@ -186,7 +187,7 @@ export class HwlpComponent {
         //       fullScreen: true
         //     });
 
-        //     this.http.post('http://localhost:8000/generate-certificate', {
+        //     this.http.post('https://ysurveillance.com/BvjssBackend/generate-certificate', {
         //       name: customer_name,
         //       email: customer_email,
         //       panNo: customer_panNo

@@ -9,7 +9,7 @@ export class CashfreeserviceService {
   constructor(private http: HttpClient) { }
 
   cashfree: any;
-  url = `http://localhost:8000`;
+  url = `https://ysurveillance.com/BvjssBackend`;
   // url = `https://ysurveillance.com/BvjssBackend`;
 
   async initiatePayment(paymentSessionId: string) {
@@ -26,7 +26,7 @@ export class CashfreeserviceService {
   }
 
   createOrder(orderDetails: any) {
-    this.http.post('http://localhost:8000/create-order', orderDetails).subscribe((response: any) => {
+    this.http.post('https://ysurveillance.com/BvjssBackend/create-order', orderDetails).subscribe((response: any) => {
       this.initiatePayment(response.payment_session_id);
     });
   }
@@ -51,7 +51,7 @@ export class CashfreeserviceService {
 
   async getInstance(): Promise<any> {
     const Cashfree = await this.loadSDK();
-    return Cashfree({ mode: 'PROD' });
+    return Cashfree({ mode: 'production' });
   }
 
 }

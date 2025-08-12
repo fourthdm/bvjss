@@ -8,7 +8,7 @@ declare var Cashfree: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'bvjss';
 
   scrolltotop = document.getElementById("scrolltotop");
@@ -21,18 +21,5 @@ export class AppComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
-    const script = document.createElement('script');
-  script.src = 'https://sdk.cashfree.com/js/v3/cashfree.js';
-  script.onload = () => {
-    console.log('Cashfree SDK Loaded:', typeof (window as any).Cashfree.checkout);
-  };
-  document.body.appendChild(script);
-    // console.log('Cashfree:', typeof Cashfree); // should show 'object'
-    // if (Cashfree?.checkout) {
-    //   console.log('Cashfree.checkout is available');
-    // } else {
-    //   console.error('Cashfree.checkout is NOT a function');
-    // }
-  }
+
 }
