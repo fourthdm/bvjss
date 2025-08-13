@@ -11,8 +11,6 @@ import { NgxSpinnerService } from 'ngx-spinner';
 
 declare var bootstrap: any;
 
-declare const Cashfree: any;
-
 @Component({
   selector: 'app-hwlp',
   templateUrl: './hwlp.component.html',
@@ -42,9 +40,7 @@ export class HwlpComponent {
   quantities = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   fixedDonations = [
-    {
-      label: 'Milk (One Time)', amount: 2000, img: '/assets/snacks/1.png', donate: "https://payments.cashfree.com/forms/bvjss"
-    },
+    { label: 'Milk (One Time)', amount: 2000, img: '/assets/snacks/1.png', donate: "https://payments.cashfree.com/forms/bvjss" },
     { label: 'Fruits (One Time)', amount: 3000, img: '/assets/snacks/2.png', donate: "https://payments.cashfree.com/forms/fruits" },
     { label: 'Breakfast (One Time)', amount: 4000, img: '/assets/snacks/7.png', donate: "https://payments.cashfree.com/forms/bvjssbreakfast" },
     { label: 'Lunch With Sweet (One Time)', amount: 8000, img: '/assets/snacks/6.png', donate: "https://payments.cashfree.com/forms/lunch" },
@@ -74,7 +70,8 @@ export class HwlpComponent {
     private http: HttpClient,
     private fb: FormBuilder,
     private zone: NgZone
-  ) {
+  )
+   {
     this.form = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -99,7 +96,7 @@ export class HwlpComponent {
   }
 
   updateTotal() {
-    this.totalAmount = 24000 * this.selectedQuantity;
+    this.totalAmount = 24000.00 * this.selectedQuantity;
   }
 
   resetOrderForm() {
