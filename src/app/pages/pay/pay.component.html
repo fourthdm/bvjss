@@ -59,35 +59,35 @@
                         </div>
                         <br>
 
-                        <label>Amount:</label>
+                        <label for="Amount">Amount:</label>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1"><i
                                     class="fa-solid fa-indian-rupee-sign"></i></span>
                             <input [(ngModel)]="order.order_amount" name="amount" class="form-control" />
                         </div>
 
-                        <label class="mt-2">Name:</label>
+                        <label for="Name" class="mt-2">Name:</label>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
                             <input [(ngModel)]="order.customer_details.customer_name" name="customer_name"
                                 class="form-control" required />
                         </div>
 
-                        <label class="mt-2">Email:</label>
+                        <label for="Email" class="mt-2">Email:</label>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-envelope"></i></span>
                             <input [(ngModel)]="order.customer_details.customer_email" name="email" class="form-control"
                                 required />
                         </div>
 
-                        <label class="mt-2">Contact No.:</label>
+                        <label for="phone" class="mt-2">Contact No.:</label>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-phone"></i></span>
                             <input [(ngModel)]="order.customer_details.customer_phone" name="phone" class="form-control"
                                 required />
                         </div>
 
-                        <label class="mt-2">PAN No: (To Generate a Certificate - Optional)</label>
+                        <label for="panNo" class="mt-2">PAN No: (To Generate a Certificate - Optional)</label>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1"><i
                                     class="fa-solid fa-id-card-clip"></i></span>
