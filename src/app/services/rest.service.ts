@@ -8,8 +8,8 @@ export class RestService {
 
   constructor(private http: HttpClient) { }
 
-  url = `http://localhost:8000`;
-  // url=`https://ysurveillance.com/BvjssBackend`;
+  // url = `http://localhost:8000`;
+  url=`https://ysurveillance.com/BvjssBackend`;
   // url=`https://ysurveillance.com/Backend`;
 
   Addfeedback(data: any) {

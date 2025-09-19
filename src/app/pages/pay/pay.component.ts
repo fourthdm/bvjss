@@ -158,8 +158,8 @@ export class PayComponent implements OnInit {
       const CashfreeGlobal = await this.waitForCashfree(1000); // wait up to 8s
 
       // 2) create an instance - IMPORTANT: mode should be 'production' or 'sandbox' (lowercase)
-      // const cashfree = CashfreeGlobal({ mode: 'production' }); // change to 'sandbox' for testing
-      const cashfree = CashfreeGlobal({ mode: 'sandbox' }); // change to 'sandbox' for testing
+      const cashfree = CashfreeGlobal({ mode: 'production' }); // change to 'sandbox' for testing
+      // const cashfree = CashfreeGlobal({ mode: 'sandbox' }); // change to 'sandbox' for testing
 
       // 3) ensure customer_id
       if (!this.order.customer_details.customer_id) {
@@ -167,8 +167,8 @@ export class PayComponent implements OnInit {
       }
 
       // 4) create order via your backend
-      // const res: any = await this.http.post('https://ysurveillance.com/Backend/token', this.order).toPromise();
-      const res: any = await this.http.post('http://localhost:8000/token', this.order).toPromise();
+      const res: any = await this.http.post('https://ysurveillance.com/BvjssBackend/token', this.order).toPromise();
+      // const res: any = await this.http.post('http://localhost:8000/token', this.order).toPromise();
 
       if (!res || !res.payment_session_id) {
         console.error('Invalid session response:', res);
@@ -192,8 +192,8 @@ export class PayComponent implements OnInit {
 
         try {
           await this.http.post(
-            'http://localhost:8000/generate-certificate',
-            // 'https://ysurveillance.com/Backend/generate-certificate',
+            // 'http://localhost:8000/generate-certificate',
+            'https://ysurveillance.com/BvjssBackend/generate-certificate',
             {
               name: customer_name,
               email: customer_email,
