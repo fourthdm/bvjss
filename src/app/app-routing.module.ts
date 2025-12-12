@@ -23,6 +23,7 @@ import { HelpinghandComponent } from './pages/helpinghand/helpinghand.component'
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PayComponent } from './pages/pay/pay.component';
+import { DonComponent } from './pages/don/don.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, title: 'BVJSS- Bhatkya Vimukt Jati Shikshan Sanstha is a best  NGO for Education & Empowerment' },
@@ -31,11 +32,12 @@ const routes: Routes = [
   { path: 'HelpingHands', component: HelpinghandComponent, title: 'Join Helping Hands | Volunteer or Support BVJSS NGO Initiatives' },
   { path: 'PabalSchool', component: MainpageComponent, title: 'Pabal School Is Mentally challenged child - Trusted Diyangang School in Maharastra' },
   { path: 'contact', component: ContactusComponent, title: 'Contact BVJSS | Reach Out to Our NGO Office & Support Team' },
-  { path: 'howhelp', component: HwlpComponent, title: 'Donate to BVJSS | Support Education for Bhatkya Vimukt Communities' },
+  { path: 'Donate', component: HwlpComponent, title: 'Donate to BVJSS | Support Education for Bhatkya Vimukt Communities' },
   { path: 'history', component: HistoryComponent, title: 'Our Journey | History of Bhatkya Vimukt Jati Shikshan Sanstha' },
   { path: 'Initiative', component: InitiativesComponent },
   { path: 'mediacoverage', component: MediacoverageComponent, title: 'Media Coverage | BVJSS NGO in News & Social Impact Stories' },
   { path: 'payments', component: PayComponent, title: 'Make a Donation | Support BVJSS NGO Initiatives' },
+  { path: 'pay', component: DonComponent, title: 'Make a Donation | Support BVJSS NGO Initiatives' },
   { path: 'payment', component: PaymentsComponent, title: 'Make a Donation | Support BVJSS NGO Initiatives' },
   { path: 'gallery', component: GalleryComponent, title: 'Gallery | BVJSS NGO Activities, Events & Community Impact' },
   // { path: 'blogs', component: BlogsComponent },
@@ -52,7 +54,7 @@ const routes: Routes = [
 
   { path: 'gallery/breakfast', component: BreakfastComponent },
   { path: 'gallery/annual', component: AnnualComponent },
-  { path: 'gallery/indepenceday', component: IndepencedayComponent },
+  { path: 'gallery/Visitor', component: IndepencedayComponent },
   { path: 'gallery/sports', component: SportsComponent },
   { path: 'gallery/otheractivities', component: OtheractivitiesComponent },
   { path: 'gallery/pabal', component: PabalComponent },

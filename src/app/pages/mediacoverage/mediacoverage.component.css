@@ -7,10 +7,10 @@
 .main h1 {
     padding: 2%;
 }
-
+/* 
 .img {
     height: 45rem;
-}
+} */
 
 @media(max-width:1440px){
     .img{

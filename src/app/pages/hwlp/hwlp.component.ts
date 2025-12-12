@@ -121,7 +121,7 @@ export class HwlpComponent {
       this.order.customer_details.customer_id = `CUST${Date.now()}`;
     }
 
-    this.http.post('https://ysurveillance.com/BvjssBackend/token', this.order).subscribe({
+    this.http.post('https://bvjss.org/Backend/token', this.order).subscribe({
       next: (res: any) => {
         const paymentSessionId = res.payment_session_id;
         const checkoutPromise = cashfree.checkout({
@@ -146,7 +146,7 @@ export class HwlpComponent {
             });
 
             //  Start certificate generation
-            this.http.post('https://ysurveillance.com/BvjssBackend/generate-certificate', {
+            this.http.post('https://bvjss.org/Backend/generate-certificate', {
               name: customer_name,
               email: customer_email,
               panNo: customer_panNo

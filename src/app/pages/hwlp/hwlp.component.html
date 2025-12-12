@@ -14,13 +14,13 @@
                 <div class="text-center">
                     <h6>Single Child (Yearly)</h6>
                     <h5>₹ 24,000</h5>
-                    <!-- <a href="https://payments.cashfree.com/forms?code=singlechild" class="btn btn-success"
+                    <a href="https://payments.cashfree.com/forms?code=singlechild" class="btn btn-success"
                         target="_blank">
-                        Donate Now</a> -->
+                        Donate Now</a>
                     <br><br>
 
-                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#donationModal"
-                        (click)="setDonation(24000, 'Single Child')">Donate</button>
+                    <!-- <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#donationModal"
+                        (click)="setDonation(24000, 'Single Child')">Donate</button> -->
                 </div>
                 <br>
             </div>
@@ -29,21 +29,26 @@
         <div class="col-md-4">
             <div class="">
                 <img src="/assets/gallery/IMG_20191014_132652.jpg" alt=""><br><br>
-                <div class="text-center">
-                    <h6>Multiple Child (Yearly)</h6>
-                    <h5 style=" align-items: center;">
-                        ₹ 24,000
-                        <select class="form-select ms-2 me-2" style="width: 70px;  height: 10%;"
-                            [(ngModel)]="selectedQuantity" (change)="updateTotal()">
-                            <option *ngFor="let qty of quantities" [value]="qty">{{ qty }}</option>
-                        </select>
+                <div>
+                    <h6 style="text-align: center;">Multiple Child (Yearly)</h6>
+                    <h5 style="text-align: center;"> ₹ 24,000 </h5>
+                    <!-- <h5 style="display: flex; padding-left: 15%;">
+                        ₹ 24,000 x
+                        <span><select class="form-select ms-2 me-2"
+                                style="width: 70px;  height: 35px !important; margin-left: -40%;"
+                                [(ngModel)]="selectedQuantity" (change)="updateTotal()">
+                                <option *ngFor="let qty of quantities" [value]="qty">{{ qty }}</option>
+                            </select></span>
                         = ₹{{ totalAmount | number:'1.0-0' }}
-                    </h5>
-                    <!-- <a href="https://payments.cashfree.com/forms/multiplechild" class="btn btn-success" target="_blank">
-                        Donate Now</a> -->
+                    </h5> -->
+                    <div class="text-center">
+                        <a href="https://payments.cashfree.com/forms/multiplechild" class="btn btn-success"
+                            target="_blank">
+                            Donate Now</a>
+                    </div>
 
-                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#donationModal"
-                        (click)="setDonation(totalAmount, 'Multiple Child')">Donate</button>
+                    <!-- <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#donationModal"
+                        (click)="setDonation(totalAmount, 'Multiple Child')">Donate</button> -->
                 </div>
             </div> <br>
         </div> <br>
@@ -73,11 +78,11 @@
                 <h6>{{ item.label }}</h6>
                 <h5>₹ {{ item.amount }}</h5>
 
-                <!-- <a href="{{item.donate}}" class="btn btn-success">Donate </a> -->
+                <a href="{{item.donate}}" class="btn btn-success" target="_blank">Donate </a>
                 <!-- <a href="https://payments.cashfree.com/forms/bvjss" class="btn btn-success" target="_blank">
                     Donate Now</a> -->
-                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#donationModal"
-                    data-mdb-dismiss="modal" (click)="setDonation(item.amount, item.label)">Donate</button>
+                <!-- <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#donationModal"
+                    data-bs-dismiss="modal" (click)="setDonation(item.amount, item.label)">Donate</button> -->
             </div>
             <br><br>
         </div> <br> <br>
@@ -188,24 +193,8 @@
     <br><br>
     <div class="row">
         <div class="col-md-4">
-            <h3>Learning Aparatus</h3><br>
+            <h3>Learning Apparatus</h3><br>
             <img src="/assets/donatethings/8.png" class="rounded" alt=""> <br> <br>
-            <div class="bttn">
-                <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                    data-bs-target="#exampleModaldonation">
-                    Donate
-                </button>
-            </div>
-            <br>
-        </div> <br>
-
-        <div class="col-md-4">
-            <h3>Ear machines</h3><br>
-            <div class="card">
-
-                <img src="/assets/donatethings/3.png" alt="">
-
-            </div> <br>
             <div class="bttn">
                 <button type="button" class="btn btn-success" data-bs-toggle="modal"
                     data-bs-target="#exampleModaldonation">
@@ -228,31 +217,6 @@
             </div>
             <br>
         </div> <br>
-    </div>
-
-    <br><br>
-    <div class="row">
-        <div class="col-md-4">
-            <h3>Books for library</h3><br>
-            <img src="/assets/librarybook.jpg" class="rounded" alt=""> <br> <br>
-            <div class="bttn">
-                <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                    data-bs-target="#exampleModaldonation">
-                    Donate
-                </button>
-            </div>
-        </div> <br>
-
-        <div class="col-md-4">
-            <h3>Sports material</h3><br>
-            <img src="/assets/sports.jpg" class="rounded" alt=""> <br> <br>
-            <div class="bttn">
-                <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                    data-bs-target="#exampleModaldonation">
-                    Donate
-                </button>
-            </div><br>
-        </div> <br>
 
         <div class="col-md-4">
             <h3>Papers</h3><br>
@@ -264,7 +228,26 @@
                 </button>
             </div><br>
         </div> <br>
-
+        <div class="col-md-4">
+            <h3>Books for the library</h3><br>
+            <img src="/assets/librarybook.jpg" class="rounded" alt=""> <br> <br>
+            <div class="bttn">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                    data-bs-target="#exampleModaldonation">
+                    Donate
+                </button>
+            </div>
+        </div> <br>
+        <div class="col-md-4">
+            <h3>Sports material</h3><br>
+            <img src="/assets/sports.jpg" class="rounded" alt=""> <br> <br>
+            <div class="bttn">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                    data-bs-target="#exampleModaldonation">
+                    Donate
+                </button>
+            </div><br>
+        </div> <br>
     </div>
 
     <br><br>
@@ -318,7 +301,7 @@
             <form (ngSubmit)="initiatePayment()">
                 <div class="modal-header">
                     <h5 class="modal-title">Pay for {{ selectedCategory }}</h5>
-                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <label>Amount:</label>
@@ -359,20 +342,70 @@
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-success">Pay Now</button>
-                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
-<!-- Modal for a donating things form-->
+<!-- Modal -->
 <div class="modal fade" id="exampleModaldonation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Donatating Important Things</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="donationform" (ngSubmit)="Donation()">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                                <input type="text" class="form-control" placeholder="First_Name" formControlName="name"
+                                    aria-label="FirstName" aria-describedby="basic-addon1" />
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-12">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-envelope"></i></span>
+                            <input type="email" class="form-control" placeholder="Email" formControlName="email"
+                                aria-label="email" aria-describedby="basic-addon1" />
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-phone"></i></span>
+                            <input type="text" class="form-control" placeholder="Contact Number"
+                                formControlName="contactNo" aria-label="contactNo" aria-describedby="basic-addon1" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label for="Project Scope" class="form-label">Message :</label> <br>
+                        <textarea class="form-control" aria-label="With textarea" formControlName="message"
+                            placeholder="Write here Name of Things and Quantity for donates."></textarea>
+                    </div>
+                    <br>
+
+                    <button type="submit" class="btn btn-success btn-lg"> Submit </button>
+                </form>
+            </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="modal fade" id="exampleModaldonation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="    modal-header">
+            <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Donatating Important Things</h5>
-                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form [formGroup]="donationform" (ngSubmit)="Donation()">
@@ -415,7 +448,7 @@
 
         </div>
     </div>
-</div>
+</div> -->
 
 <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-scale-multiple" [fullScreen]="true">
     <p style="color: white">Wait a minute! Generating your Certificate.... </p>

@@ -1,9 +1,20 @@
+.mains {
+    background-image: url('/assets/bg.png');
+    background-repeat: repeat;
+    background-size: 100%;
+    background-color: #ffffff83;
+    background-blend-mode: lighten;
+}
+
 .p {
     font-size: 20px;
     color: black;
 }
 
-h1,
+h1 {
+    font-family: 'newcustomfont';
+}
+
 h2,
 p {
     color: black;
@@ -13,9 +24,9 @@ ul {
     color: black;
 }
 
-h2 {
+/* h2 {
     text-decoration: underline;
-}
+} */
 
 img {
     width: 100%;
@@ -238,6 +249,32 @@ h4 {
     background-color: #526756;
     color: white;
 }
-.animate__animated{
+
+.animate__animated {
     color: white;
+}
+
+.divtext {
+    text-align: justify;
+    font-size: 17px;
+}
+
+.facility {
+    font-size: 3em;
+    font-family: 'newcustomfont';
+    color: #526756;
+}
+
+.fa-star {
+    color: rgb(92, 18, 18);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'newcustomfont';
+    src: url('/assets/fonts/Montserrat-Italic-VariableFont_wght.ttf');
+}
+
+.imagess {
+    border-radius: 5%;
 }

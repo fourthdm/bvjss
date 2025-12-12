@@ -1,0 +1,131 @@
+<img width="100%" src="/assets/headerimage/Helping Hand.jpg" alt="">
+<br><br>
+
+<div class="container"> <br>
+    <h2>Donate Now</h2>
+    <div class="row"> <br>
+        <div class="col-md-6">
+            <br>
+            <div class="textx">
+                <p>
+                    In order to continue doing what we are doing, we need your generous support.
+                    <br> Your contribution can make a difference.
+                </p>
+                <br>
+                <h5>Contact Us :</h5>
+                <p><span><i class="fa-solid fa-envelope"></i></span> info&#64;bvjss.org <br>
+                    <i class="fa-solid fa-envelope"></i> backupbvjss&#64;gmail.com
+                </p>
+
+                <p><span><i class="fa-solid fa-phone-volume"></i></span> 9372466612 <br>
+                    <span><i class="fa-solid fa-phone-volume"></i></span> 9325500100
+                </p> <br>
+
+                <h5>Terms & Conditions :</h5>
+                <p>You agree to share information entered on this page with BVJSS|Bhatkya Vimukt Jati Shikshan Sanstha
+                    (owner of this page) and Cashfree, adhering to applicable laws.</p>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <form (ngSubmit)="initiatePayment()" #donationForm="ngForm">
+
+                        <!-- Predefined Amounts -->
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="radio" [(ngModel)]="order.order_amount" name="order_amount"
+                                    value="10000" />
+                                <label>10,000 ₹</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="radio" [(ngModel)]="order.order_amount" name="order_amount"
+                                    value="15000" />
+                                <label>15,000 ₹</label>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="radio" [(ngModel)]="order.order_amount" name="order_amount"
+                                    value="24000" />
+                                <label>24,000 ₹</label>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <!-- Custom Amount -->
+                        <label for="Amount">Other Amount:</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa-solid fa-indian-rupee-sign"></i></span>
+                            <input [(ngModel)]="order.order_amount" name="order_amount" class="form-control"
+                                type="number" min="1" />
+                        </div>
+
+                        <!-- Name -->
+                        <label for="Name" class="mt-2">Name:</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                            <input [(ngModel)]="order.customer_details.customer_name" name="customer_name"
+                                class="form-control" required />
+                        </div>
+
+                        <!-- Email -->
+                        <label for="Email" class="mt-2">Email:</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                            <input [(ngModel)]="order.customer_details.customer_email" name="customer_email"
+                                class="form-control" required />
+                        </div>
+
+                        <!-- Phone -->
+                        <label for="phone" class="mt-2">Contact No.:</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                            <input [(ngModel)]="order.customer_details.customer_phone" name="customer_phone"
+                                class="form-control" required />
+                        </div>
+
+                        <!-- PAN (Optional) -->
+                        <label for="panNo" class="mt-2">PAN No: (Optional for certificate)</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text"><i class="fa-solid fa-id-card-clip"></i></span>
+                            <input [(ngModel)]="order.customer_details.customer_panNo" name="customer_panNo"
+                                class="form-control" />
+                        </div>
+
+                        <br />
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success btn-lg">Pay Now</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+
+            <div *ngIf="showPopup" class="popup-overlay">
+                <div class="popup-box">
+                    <h3>Generate Donation Certificate</h3>
+                    <form [formGroup]="form" (ngSubmit)="submitCertificateForm()">
+
+                        <label>Name:</label>
+                        <input formControlName="name" class="form-control" />
+
+                        <label>Email:</label>
+                        <input formControlName="email" type="email" class="form-control" />
+
+                        <label>PAN No:</label>
+                        <input formControlName="panNo" class="form-control" />
+
+                        <button type="submit" class="btn btn-primary mt-3">Generate Certificate</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<br>
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-scale-multiple" [fullScreen]="true">
+    <p style="color: white">Wait a minute! Generating your Certificate.... </p>
+</ngx-spinner>

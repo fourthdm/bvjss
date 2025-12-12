@@ -9,6 +9,8 @@ import { RestService } from 'src/app/services/rest.service';
 })
 export class FeedbackComponent implements OnInit {
 
+  Blogs: any[] = [];
+
   Feedbackform: FormGroup;
   Allfeedback: any[] = [];
 
@@ -28,6 +30,7 @@ export class FeedbackComponent implements OnInit {
   ngOnInit(): void {
 
     this.Feedback();
+    this.allBlog();
     this.showPopup = true;
 
     // this.interval = setInterval(() => {
@@ -41,7 +44,6 @@ export class FeedbackComponent implements OnInit {
       this.closePopup();
     }
   }
-
 
   closePopup() {
     this.showPopup = false;
@@ -69,6 +71,15 @@ export class FeedbackComponent implements OnInit {
     }, (err: any) => {
       console.log(err);
     });
+  }
+
+  allBlog() {
+    this.rest.AllBlogs().subscribe((data: any) => {
+      console.log(data);
+      this.Blogs = data.data;
+    }, (err: any) => {
+      console.log(err);
+    })
   }
 
 }

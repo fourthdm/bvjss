@@ -10,6 +10,8 @@
 
 h5{
     text-align: center;
+    /* font-family: 'mycustomfont'; */
+    /* font-weight: bold; */
 }
 
 .og{
@@ -32,4 +34,11 @@ img{
 }
 .cardphoto{
     padding: 0%;
+}
+
+@font-face {
+    font-family: 'mycustomfont';
+    src: url('/assets/fonts/ahellya.ttf');
+    font-weight: normal;
+    font-style: normal;
 }

@@ -11,7 +11,7 @@
                 </li>
                 <br>
 
-                <li [routerLink]="['/gallery/indepenceday']" class="animate__animated animate__fadeInLeft ">
+                <li [routerLink]="['/gallery/Visitor']" class="animate__animated animate__fadeInLeft ">
                     <img src="/assets/gallery/indepenceday/IMG-20250311-WA0176.jpg" alt=""><br> Visitor
                 </li>
 
@@ -38,6 +38,17 @@
                 </li>
             </ul>
         </div>
+
+        <!-- <div class="col-md-9" *ngFor="let g of Gallerys, let i=index">
+            <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+
+                <a [href]="g.Gimage">
+                    <img [src]="g.Gimage" alt="">
+                </a>
+            </lightgallery>
+        </div> -->
+        <br><br>
+
 
         <div class="col-md-9">
             <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
@@ -90,6 +101,7 @@
 
             </lightgallery>
         </div>
+
     </div>
 </div>
 <br><br>

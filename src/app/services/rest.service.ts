@@ -9,8 +9,7 @@ export class RestService {
   constructor(private http: HttpClient) { }
 
   // url = `http://localhost:8000`;
-  url=`https://ysurveillance.com/BvjssBackend`;
-  // url=`https://ysurveillance.com/Backend`;
+  url = `https://bvjss.org/Backend`;
 
   Addfeedback(data: any) {
     return this.http.post(this.url + '/addfeedback', data);
@@ -22,6 +21,26 @@ export class RestService {
 
   Donate(data: any) {
     return this.http.post(this.url + '/getDonatationsform', data);
+  }
+
+  AllBlogs() {
+    return this.http.get(this.url + '/Allblogs');
+  }
+
+  AllGallerybyDepartment(data: any) {
+    return this.http.post(this.url + '/Allgallerybydepartment', data);
+  }
+
+  AllDailyReport() {
+    return this.http.get(this.url + '/AllDailyReports');
+  }
+
+  AlllatestUpdate() {
+    return this.http.get(this.url + '/Alllatestupdate');
+  }
+
+  AllVideos() {
+    return this.http.get(this.url + '/AllVideos');
   }
 
 }

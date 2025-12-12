@@ -37,6 +37,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { MainpageComponent } from './pages/mainpage/mainpage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PayComponent } from './pages/pay/pay.component';
+import { DonComponent } from './pages/don/don.component';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { PayComponent } from './pages/pay/pay.component';
     SkillsComponent,
     SportsComponent,
     MainpageComponent,
-    PayComponent
+    PayComponent,
+    DonComponent
   ],
   imports: [
     BrowserModule,

@@ -161,7 +161,7 @@ export class PaymentsComponent {
       this.order.customer_details.customer_id = `CUST${Date.now()}`;
     }
 
-    this.http.post('https://ysurveillance.com/BvjssBackend/token', this.order).subscribe({
+    this.http.post('http://localhost:8000/token', this.order).subscribe({
       next: (res: any) => {
 
         const paymentSessionId = res.payment_session_id;
@@ -184,7 +184,7 @@ export class PaymentsComponent {
 
             if (!customer_panNo && customer_panNo.trim() === '') {
               alert('You are not entered a Pan number certificate not generated.')
-              this.http.post('https://ysurveillance.com/BvjssBackend/generate-certificate', {
+              this.http.post('http://localhost:8000/generate-certificate', {
                 name: customer_name,
                 email: customer_email,
                 panNo: customer_panNo

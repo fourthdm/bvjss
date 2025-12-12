@@ -128,8 +128,8 @@
                         </div> <br>
                     </div>
                 </div>
-<!-- 
-                <div class="sticky-notes">
+
+                <!--  <div class="sticky-notes">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="note">Respected Members of BVJSS, <br>
@@ -276,7 +276,6 @@
 
                     </div>
                 </div> -->
-
             </div>
 
             <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
@@ -285,58 +284,36 @@
                 </div>
 
                 <div class="sticky-notes">
-
-                    <div class="row">
+                    <div class="row" *ngFor="let a of Blogs, let i=index">
                         <div class="col-md-4">
                             <br>
                             <div class="row">
-                                <div class="col-lg-3 col-md-0"></div>
-                                <div class="col-lg-6 col-md-12">
+                                <br><br>
+                                <div class="col-lg-12 col-md-12">
                                     <div class="card1">
                                         <div class="card-body">
-                                            <img class="client" src="/assets/blogsimg/Mr. Naval Ghule.jpg" alt="">
+                                            <br><br> <img class="client" [src]="a.Blogimage" alt="">
                                         </div>
                                     </div> <br>
                                     <div class="text-center">
-                                        <h5 style="color: white;">Mr.Naval Ghule</h5>
+                                        <h5 style="color: white;">{{a.AuthorName}}</h5>
                                     </div>
                                 </div> <br>
                             </div>
-
-                            <p></p>
                         </div>
-                        <div class="col-md-8"> <br><br> <br><br>
+                        <div class="col-md-8"> <br><br>
                             <div class="container">
                                 <div class="row">
                                     <!-- <h5 style="color: black;"><b></b></h5> -->
                                     <p class="blogs">
-                                        I am someone who naturally prefers to work in a challenging role where I
-                                        genuinely get
-                                        to make a difference to people's lives
-                                        I did not become a social worker for financial reward. I have passion,
-                                        commitment and
-                                        dedication for social work. <br><br>
-                                        Walking the streets daily with open eyes and no headphones in my ears, I
-                                        can
-                                        see the
-                                        injustice all around.
-                                        And while I know I am not going to change the world, but I also know
-                                        that I
-                                        can make a
-                                        difference in lives of some people on that street.
-
-                                        That’s why I opted for social work, I understand the impact of such a
-                                        poor
-                                        and orphaned
-                                        child and the challenges such a family faces.
-                                        That is why I am helping as much as I can in the field of social
-                                        welfare..
+                                        <b style="font-size: 21px;"> {{a.Blog_Title}}</b><br><br>
+                                        {{a.Information}}
+                                        <br><br>
+                                        <span style="float: right;">{{a.date|date}}</span>
                                     </p>
 
                                 </div>
                             </div>
-
-
                             <br><br>
                         </div>
                         <br><br>
@@ -351,6 +328,53 @@
                 <div class="sticky-notes">
                     <div class="container">
                         <div class="row">
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="ratio ratio-16x9">
+                                            <video controls loop onloadedmetadata="this.muted = true">
+                                                <source src="/assets/gallery/video/3.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div> <br>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="ratio ratio-16x9">
+                                            <video controls loop onloadedmetadata="this.muted = true">
+                                                <source src="/assets/gallery/video/4.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div> <br>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="ratio ratio-16x9">
+                                            <video controls loop onloadedmetadata="this.muted = true">
+                                                <source src="/assets/gallery/video/new.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div> <br>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="ratio ratio-16x9">
+                                            <video controls loop onloadedmetadata="this.muted = true">
+                                                <source src="/assets/gallery/video/UkgCsr.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div> <br>
+                            </div>
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-body">

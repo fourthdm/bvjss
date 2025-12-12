@@ -115,3 +115,24 @@ img {
 .bttn {
     text-align: end;
 }
+
+
+@font-face {
+    font-family: 'newcustomfont';
+    src: url('/assets/fonts/Montserrat-Italic-VariableFont_wght.ttf');
+}
+
+h1 {
+    font-family: 'newcustomfont';
+}
+
+.cardblog {
+    background-color: rgb(92, 18, 18);
+    border-top: 3px solid #979436;
+    /* border-color: #979436; */
+}
+
+.client{
+    height: 50% !important;
+    width: 100%;
+}

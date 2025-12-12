@@ -7,7 +7,7 @@
             <div class="col-md-3">
                 <ul class="ul">
                     <li [routerLink]="['/gallery/Inaugation']" class="animate__animated animate__fadeInLeft ">
-                        <img src="/assets/gallery/ethon/DSC_0198.jpg " alt=""><br> Inauguration 
+                        <img src="/assets/gallery/ethon/DSC_0198.jpg " alt=""><br> Inauguration
                     </li>
                     <br>
                     <li [routerLink]="['/gallery/indepenceday']" class="animate__animated animate__fadeInLeft ">
@@ -41,6 +41,15 @@
                 </ul>
             </div>
 
+            <!--   <div class="col-md-9" *ngFor="let g of Gallerys, let i=index">
+            <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+
+                <a [href]="g.Gimage">
+                    <img [src]="g.Gimage" alt="">
+                </a>
+            </lightgallery>
+            </div> -->
+
             <div class="col-md-9">
                 <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
 
@@ -53,7 +62,7 @@
                     <a href="/assets/gallery/reunion/DSC_5369.JPG">
                         <img src="/assets/gallery/reunion/DSC_5369.JPG" alt="">
                     </a>
-                 
+
                     <a href="/assets/gallery/reunion/DSC_5411.JPG">
                         <img src="/assets/gallery/reunion/DSC_5411.JPG" alt="">
                     </a>

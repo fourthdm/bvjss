@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RestService } from 'src/app/services/rest.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
- scrolltop = document.getElementById('scrolltop');
+export class HomeComponent implements OnInit {
+  scrolltop = document.getElementById('scrolltop');
   rootelement = document.documentElement;
 
   scroll() {
@@ -16,7 +17,7 @@ export class HomeComponent {
     })
   }
 
-    ngAfterViewInit() {
+  ngAfterViewInit() {
     const script = document.createElement('script');
     script.src = 'https://www.instagram.com/embed.js';
     script.async = true;
@@ -31,4 +32,34 @@ export class HomeComponent {
       }
     };
   }
+
+  Reports: any[] = [];
+
+  LatestUpdate: any[] = [];
+
+  constructor(private rest: RestService) { }
+
+  ngOnInit(): void {
+    this.Allreport();
+    this.AllLatestUpdate();
+  }
+
+  Allreport() {
+    this.rest.AllDailyReport().subscribe((data: any) => {
+      this.Reports = data.data;
+      console.log(data);
+    }, (err: any) => {
+      console.log(err);
+    });
+  }
+
+  AllLatestUpdate() {
+    this.rest.AlllatestUpdate().subscribe((data: any) => {
+      this.LatestUpdate = data.data;
+      console.log(data);
+    }, (err: any) => {
+      console.log(err);
+    })
+  }
+
 }

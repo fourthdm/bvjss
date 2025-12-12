@@ -7,6 +7,10 @@
 
 }
 
+h1{
+    font-family: 'newcustomfont';
+}
+
 .div {
     text-align: center;
     color: black;
@@ -25,6 +29,7 @@
 .p {
     text-align: center;
     font-size: 20px;
+    /* font-family: 'fontawesome'; */
 }
 
 h5,
@@ -130,7 +135,9 @@ h4 {
 .whytext {
     font-size: 45px;
     font-weight: 550;
-    color: black;
+    color: #25392a;
+    /* color: black; */
+    font-family: 'newcustomfont';
 }
 
 .fa-angles-right {
@@ -150,7 +157,7 @@ h4 {
     /* background-color: #007bff; */
     /* Blue background */
     /* color: white; */
-        color: #ab5129;
+    color: #ab5129;
     /* White text */
     font-weight: bold;
     font-size: 20px;
@@ -160,4 +167,32 @@ h4 {
 .accordion-button.accordion-active-color.collapsed {
     background-color: #f8f9fa;
     color: #212529;
+}
+
+@font-face {
+    font-family: 'mycustomfont';
+    src: url('/assets/fonts/AgenorNeue-Regular.ttf');
+}
+
+.information {
+    font-family: 'newcustomfont';
+    font-weight: 500;
+    color: black;
+
+}
+
+@font-face {
+    font-family: 'newcustomfont';
+    src: url('/assets/fonts/Montserrat-Italic-VariableFont_wght.ttf');
+}
+.hs{
+       text-overflow: ellipsis;
+    overflow-y: hidden;
+}
+
+.s{
+    background-color: white;
+    height: 90%;
+    /* text-overflow: ellipsis; */
+    /* overflow-y: hidden; */
 }
