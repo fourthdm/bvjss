@@ -24,6 +24,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PayComponent } from './pages/pay/pay.component';
 import { DonComponent } from './pages/don/don.component';
+import { VideoComponent } from './pages/video/video.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, title: 'BVJSS- Bhatkya Vimukt Jati Shikshan Sanstha is a best  NGO for Education & Empowerment' },
@@ -60,6 +61,7 @@ const routes: Routes = [
   { path: 'gallery/pabal', component: PabalComponent },
   { path: 'gallery/skill', component: SkillsComponent },
   { path: 'gallery/Inaugation', component: EthonComponent },
+  { path: 'gallery/Video', component: VideoComponent },
   { path: "**", redirectTo: '' }
 ];
 

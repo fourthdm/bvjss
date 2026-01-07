@@ -87,6 +87,17 @@
                 </div>
             </div> <br>
         </div>
+        <div class="col-md-4">
+            <div class="card" (click)="scroll()" [routerLink]="['/gallery/Video']">
+                <!-- <img src="/assets/dailyreports/DSC_1112.JPG" alt=""> -->
+                    <video controls loop onloadedmetadata="this.muted = true">
+                            <source src="/assets/gallery/video/SPortsday.mp4" type="video/mp4">
+                        </video>
+                <div class="overlay">
+                    <div class="text"><b>Video</b></div>
+                </div>
+            </div> <br>
+        </div>
     </div> <br>
 
 </div>

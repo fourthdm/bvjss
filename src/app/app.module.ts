@@ -38,6 +38,7 @@ import { MainpageComponent } from './pages/mainpage/mainpage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PayComponent } from './pages/pay/pay.component';
 import { DonComponent } from './pages/don/don.component';
+import { VideoComponent } from './pages/video/video.component';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import { DonComponent } from './pages/don/don.component';
     SportsComponent,
     MainpageComponent,
     PayComponent,
-    DonComponent
+    DonComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,
