@@ -25,6 +25,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PayComponent } from './pages/pay/pay.component';
 import { DonComponent } from './pages/don/don.component';
 import { VideoComponent } from './pages/video/video.component';
+import { LatestupdatesComponent } from './pages/latestupdates/latestupdates.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, title: 'BVJSS- Bhatkya Vimukt Jati Shikshan Sanstha is a best  NGO for Education & Empowerment' },
@@ -41,6 +42,7 @@ const routes: Routes = [
   { path: 'pay', component: DonComponent, title: 'Make a Donation | Support BVJSS NGO Initiatives' },
   { path: 'payment', component: PaymentsComponent, title: 'Make a Donation | Support BVJSS NGO Initiatives' },
   { path: 'gallery', component: GalleryComponent, title: 'Gallery | BVJSS NGO Activities, Events & Community Impact' },
+  { path: 'Latestupdate', component: LatestupdatesComponent, title: 'Latest Updates | BVJSS NGO Activities, Events & Community Impact' },
   // { path: 'blogs', component: BlogsComponent },
   // { path: 'video', component: VideoComponent },
   { path: 'TermsConditions', component: TermconditionComponent, title: 'Terms & Condiitons | BVJSS NGO' },

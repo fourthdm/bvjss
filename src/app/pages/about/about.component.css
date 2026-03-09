@@ -1,38 +1,39 @@
-.main{
+.main {
     background-color: #526756;
     color: white;
     text-align: center;
 }
 
-.main h1{
+.main h1 {
     padding: 2%;
 }
 
-h5{
+h5 {
     text-align: center;
     /* font-family: 'mycustomfont'; */
     /* font-weight: bold; */
 }
 
-.og{
+.og {
     background-color: #526756;
     color: white;
 }
 
-.g{
+.g {
     background-color: #18a058;
     color: white;
 }
 
-.card{
+.card {
     height: 100%;
     padding: 1%;
 }
 
-img{
+.img {
     width: 100%;
 }
-.cardphoto{
+
+.cardphoto {
     padding: 0%;
 }
 
@@ -41,4 +42,24 @@ img{
     src: url('/assets/fonts/ahellya.ttf');
     font-weight: normal;
     font-style: normal;
+}
+
+.hs {
+    text-overflow: ellipsis;
+    overflow-y: hidden;
+}
+
+.s {
+    background-color: white;
+    height: 90%;
+    /* text-overflow: ellipsis; */
+    /* overflow-y: hidden; */
+}
+
+.names {
+    font-size: 25px;
+    font-weight: 550;
+    color: #1d2e22;
+    /* color: black; */
+    /* font-family: 'newcustomfont'; */
 }

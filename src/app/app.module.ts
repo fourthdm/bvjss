@@ -39,6 +39,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PayComponent } from './pages/pay/pay.component';
 import { DonComponent } from './pages/don/don.component';
 import { VideoComponent } from './pages/video/video.component';
+import { LatestupdatesComponent } from './pages/latestupdates/latestupdates.component';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { VideoComponent } from './pages/video/video.component';
     MainpageComponent,
     PayComponent,
     DonComponent,
-    VideoComponent
+    VideoComponent,
+    LatestupdatesComponent
   ],
   imports: [
     BrowserModule,

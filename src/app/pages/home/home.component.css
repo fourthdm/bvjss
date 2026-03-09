@@ -7,7 +7,7 @@
 
 }
 
-h1{
+h1 {
     font-family: 'newcustomfont';
 }
 
@@ -185,14 +185,23 @@ h4 {
     font-family: 'newcustomfont';
     src: url('/assets/fonts/Montserrat-Italic-VariableFont_wght.ttf');
 }
-.hs{
-       text-overflow: ellipsis;
+
+.hs {
+    text-overflow: ellipsis;
     overflow-y: hidden;
 }
 
-.s{
+.s {
     background-color: white;
     height: 90%;
     /* text-overflow: ellipsis; */
     /* overflow-y: hidden; */
+}
+
+.names {
+    font-size: 25px;
+    font-weight: 550;
+    color: #1d2e22;
+    /* color: black; */
+    /* font-family: 'newcustomfont'; */
 }
